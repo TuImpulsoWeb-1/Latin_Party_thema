@@ -106,14 +106,58 @@ function lp_get_page_url($slug_or_key, $fallback_hash = '') {
         }
     }
 
-    // 4. Fallback: if we are on the front page and a section hash exists, use it
-    if (!empty($fallback_hash) && is_front_page()) {
-        return $fallback_hash;
+    // 3b. Search by page title (e.g. 'Servicios', 'Nosotros', 'Contacto')
+    $pages_by_title = get_posts(array(
+        'post_type'   => 'page',
+        'title'       => ucfirst($clean_key),
+        'post_status' => 'publish',
+        'numberposts' => 1,
+    ));
+    if (!empty($pages_by_title)) {
+        return esc_url(get_permalink($pages_by_title[0]->ID));
     }
 
-    // 5. Ultimate fallback
+    // 4. Fallback: if a section hash exists, use anchor on front page or full url on subpages
+    if (!empty($fallback_hash)) {
+        if (is_front_page()) {
+            return $fallback_hash;
+        } else {
+            return esc_url(home_url('/' . ltrim($fallback_hash, '/')));
+        }
+    }
+
+    // 5. Ultimate fallback respecting PATHINFO / index.php permalinks
+    $structure = get_option('permalink_structure');
+    if ($structure && strpos($structure, 'index.php') !== false) {
+        return esc_url(home_url('/index.php/' . $clean_key . '/'));
+    }
+
     return esc_url(home_url('/' . $clean_key . '/'));
 }
+
+/**
+ * Auto-correct any hardcoded or broken menu items in WordPress native menus
+ */
+function latin_party_fix_nav_menu_items($items) {
+    if (!is_array($items)) {
+        return $items;
+    }
+    foreach ($items as $item) {
+        if (!isset($item->title) || !isset($item->url)) {
+            continue;
+        }
+        $title_lower = strtolower(trim($item->title));
+        if (strpos($title_lower, 'servicio') !== false) {
+            $item->url = lp_get_page_url('servicios', '#servicios');
+        } elseif (strpos($title_lower, 'nosotros') !== false) {
+            $item->url = lp_get_page_url('nosotros');
+        } elseif (strpos($title_lower, 'contacto') !== false) {
+            $item->url = lp_get_page_url('contacto', '#contacto');
+        }
+    }
+    return $items;
+}
+add_filter('wp_nav_menu_objects', 'latin_party_fix_nav_menu_items');
 
 /**
  * Resolve Image URL from Customizer/ACF (handles ID, array, string) with fallback

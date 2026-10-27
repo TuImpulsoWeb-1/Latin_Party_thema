@@ -75,12 +75,16 @@ $ig    = lp_get_option('lp_instagram', 'https://www.instagram.com/latinparty?igs
             </div>
 
             <!-- Form & Social Section -->
-            <div style="display: grid; grid-template-columns: 1fr; max-width: 820px; margin: 40px auto 0 auto;">
+            <div class="contact-form-container">
                 <div class="contact-form-wrap">
-                    <div style="text-align: center; margin-bottom: 30px;">
-                        <span class="section-badge gold">Cotización Gratuita</span>
-                        <h2 style="font-size: 2rem; margin-bottom: 10px;">Diseñemos juntos tu <span class="highlight-gold">evento</span></h2>
-                        <p style="color: var(--text-muted); font-size: 0.95rem;">Completa el formulario y nos pondremos en contacto contigo de forma inmediata.</p>
+                    <div style="text-align: center; margin-bottom: 25px;">
+                        <span class="section-badge gold"><?php echo esc_html(lp_get_setting('lp_contact_form_badge', 'Cotización Gratuita')); ?></span>
+                        <h2 style="font-size: clamp(1.6rem, 3.5vw, 2.1rem); margin-bottom: 10px;">
+                            <?php echo esc_html(lp_get_setting('lp_contact_form_title', 'Diseñemos juntos tu evento')); ?>
+                        </h2>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 600px; margin: 0 auto;">
+                            <?php echo esc_html(lp_get_setting('lp_contact_form_desc', 'Completa el formulario y nos pondremos en contacto contigo de forma inmediata.')); ?>
+                        </p>
                     </div>
 
                     <form id="latin-party-contact-form" method="post">
@@ -121,16 +125,16 @@ $ig    = lp_get_option('lp_instagram', 'https://www.instagram.com/latinparty?igs
                         </div>
 
                         <button type="submit" class="btn btn-gold" style="width: 100%; font-size: 1.05rem;">
-                            <i class="fa-solid fa-paper-plane"></i> Enviar Cotización Ahora
+                            <i class="fa-solid fa-paper-plane"></i> <?php echo esc_html(lp_get_setting('lp_contact_btn_text', 'Enviar Cotización Ahora')); ?>
                         </button>
 
                         <div id="form-status-msg" class="form-status-msg"></div>
                     </form>
 
                     <!-- Redes Sociales Banner -->
-                    <div style="margin-top: 40px; text-align: center; border-top: 1px solid var(--border-glass); padding-top: 25px;">
+                    <div class="contact-social-wrap">
                         <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 12px;">Síguenos en redes como <strong>@Latinpartyeventos</strong></p>
-                        <div style="display: flex; justify-content: center; gap: 14px;">
+                        <div class="contact-social-buttons">
                             <?php if (!empty($fb)) : ?>
                                 <a href="<?php echo esc_url($fb); ?>" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
                                     <i class="fa-brands fa-facebook-f"></i> Facebook

@@ -357,6 +357,192 @@ function latin_party_customize_register($wp_customize) {
         'section'     => 'lp_updater_section',
         'type'        => 'password',
     ));
+    // =========================================================================
+    // 8. TEXTOS: PÁGINA DE SERVICIOS
+    // =========================================================================
+    $wp_customize->add_section('lp_serv_section', array(
+        'title'    => __('📄 Textos: Página de Servicios', 'latin-party'),
+        'panel'    => 'latin_party_theme_panel',
+        'priority' => 80,
+    ));
+
+    $wp_customize->add_setting('lp_serv_page_title', array(
+        'default'           => 'Todo lo que necesitas para tu evento en un solo lugar',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+    $wp_customize->add_control('lp_serv_page_title', array(
+        'label'   => __('Título Principal (Hero)', 'latin-party'),
+        'section' => 'lp_serv_section',
+        'type'    => 'text',
+    ));
+
+    $wp_customize->add_setting('lp_serv_page_desc', array(
+        'default'           => 'En Latin Party Eventos ofrecemos soluciones completas para cada tipo de celebración. Desde el sonido profesional, la iluminación y la ambientación, hasta la producción integral de conciertos, bodas y eventos corporativos.',
+        'sanitize_callback' => 'sanitize_textarea_field',
+    ));
+    $wp_customize->add_control('lp_serv_page_desc', array(
+        'label'   => __('Descripción Principal (Hero)', 'latin-party'),
+        'section' => 'lp_serv_section',
+        'type'    => 'textarea',
+    ));
+
+    $wp_customize->add_setting('lp_serv_audio_title', array(
+        'default'           => 'Soluciones de Audio Profesional',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+    $wp_customize->add_control('lp_serv_audio_title', array(
+        'label'   => __('Título Sección Audio', 'latin-party'),
+        'section' => 'lp_serv_section',
+        'type'    => 'text',
+    ));
+
+    $wp_customize->add_setting('lp_serv_lights_title', array(
+        'default'           => 'Iluminación Creativa & Control DMX',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+    $wp_customize->add_control('lp_serv_lights_title', array(
+        'label'   => __('Título Sección Iluminación', 'latin-party'),
+        'section' => 'lp_serv_section',
+        'type'    => 'text',
+    ));
+
+    $wp_customize->add_setting('lp_serv_led_title', array(
+        'default'           => 'Pistas de Baile LED, Tarimas y Carpas',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+    $wp_customize->add_control('lp_serv_led_title', array(
+        'label'   => __('Título Sección Pistas & Tarimas', 'latin-party'),
+        'section' => 'lp_serv_section',
+        'type'    => 'text',
+    ));
+
+    $wp_customize->add_setting('lp_serv_cta_title', array(
+        'default'           => '¿Necesitas un paquete personalizado?',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+    $wp_customize->add_control('lp_serv_cta_title', array(
+        'label'   => __('Título Banner Asesoría', 'latin-party'),
+        'section' => 'lp_serv_section',
+        'type'    => 'text',
+    ));
+
+    $wp_customize->add_setting('lp_serv_cta_btn', array(
+        'default'           => 'Hablar con un Asesor',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+    $wp_customize->add_control('lp_serv_cta_btn', array(
+        'label'   => __('Texto Botón Banner Asesoría', 'latin-party'),
+        'section' => 'lp_serv_section',
+        'type'    => 'text',
+    ));
+
+    // =========================================================================
+    // 9. TEXTOS: PÁGINA DE CONTACTO & FORMULARIO
+    // =========================================================================
+    $wp_customize->add_section('lp_contact_texts_section', array(
+        'title'    => __('📄 Textos: Página de Contacto', 'latin-party'),
+        'panel'    => 'latin_party_theme_panel',
+        'priority' => 90,
+    ));
+
+    $wp_customize->add_setting('lp_contact_hero_title', array(
+        'default'           => 'Tu Celebración, Nuestro Legado',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+    $wp_customize->add_control('lp_contact_hero_title', array(
+        'label'   => __('Título Principal (Hero)', 'latin-party'),
+        'section' => 'lp_contact_texts_section',
+        'type'    => 'text',
+    ));
+
+    $wp_customize->add_setting('lp_contact_hero_desc', array(
+        'default'           => '¿Planeando un evento inolvidable? Nuestro equipo está listo para asesorarte y crear la mejor experiencia para ti y tus invitados. Déjanos tus datos y recibe una cotización gratuita en minutos.',
+        'sanitize_callback' => 'sanitize_textarea_field',
+    ));
+    $wp_customize->add_control('lp_contact_hero_desc', array(
+        'label'   => __('Descripción Principal (Hero)', 'latin-party'),
+        'section' => 'lp_contact_texts_section',
+        'type'    => 'textarea',
+    ));
+
+    $wp_customize->add_setting('lp_contact_form_title', array(
+        'default'           => 'Diseñemos juntos tu evento',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+    $wp_customize->add_control('lp_contact_form_title', array(
+        'label'   => __('Título del Formulario', 'latin-party'),
+        'section' => 'lp_contact_texts_section',
+        'type'    => 'text',
+    ));
+
+    $wp_customize->add_setting('lp_contact_btn_text', array(
+        'default'           => 'Enviar Cotización Ahora',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+    $wp_customize->add_control('lp_contact_btn_text', array(
+        'label'   => __('Texto Botón Enviar Formulario', 'latin-party'),
+        'section' => 'lp_contact_texts_section',
+        'type'    => 'text',
+    ));
+
+    // =========================================================================
+    // 10. TEXTOS: PÁGINA DE NOSOTROS
+    // =========================================================================
+    $wp_customize->add_section('lp_nosotros_section', array(
+        'title'    => __('📄 Textos: Página de Nosotros', 'latin-party'),
+        'panel'    => 'latin_party_theme_panel',
+        'priority' => 100,
+    ));
+
+    $wp_customize->add_setting('lp_nosotros_hero_title', array(
+        'default'           => 'Tu Celebración, Nuestro Legado',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+    $wp_customize->add_control('lp_nosotros_hero_title', array(
+        'label'   => __('Título Principal (Hero)', 'latin-party'),
+        'section' => 'lp_nosotros_section',
+        'type'    => 'text',
+    ));
+
+    $wp_customize->add_setting('lp_mision_title', array(
+        'default'           => 'Nuestra Misión',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+    $wp_customize->add_control('lp_mision_title', array(
+        'label'   => __('Título Misión', 'latin-party'),
+        'section' => 'lp_nosotros_section',
+        'type'    => 'text',
+    ));
+
+    $wp_customize->add_setting('lp_mision_text', array(
+        'default'           => 'Ofrecer alternativas efectivas, eficaces y eficientes en la creación, diseño, organización y ejecución de eventos sociales y empresariales. Crear un ambiente óptimo con calidad, seriedad y cumplimiento, garantizando una ocasión inolvidable.',
+        'sanitize_callback' => 'sanitize_textarea_field',
+    ));
+    $wp_customize->add_control('lp_mision_text', array(
+        'label'   => __('Texto Misión', 'latin-party'),
+        'section' => 'lp_nosotros_section',
+        'type'    => 'textarea',
+    ));
+
+    $wp_customize->add_setting('lp_vision_title', array(
+        'default'           => 'Nuestra Visión',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+    $wp_customize->add_control('lp_vision_title', array(
+        'label'   => __('Título Visión', 'latin-party'),
+        'section' => 'lp_nosotros_section',
+        'type'    => 'text',
+    ));
+
+    $wp_customize->add_setting('lp_vision_text', array(
+        'default'           => 'Queremos que LATIN PARTY EVENTOS sea una empresa líder en organización y producción de eventos sociales y corporativos, con presencia y reconocimiento a nivel nacional, basada en el profesionalismo y la calidad humana de nuestro personal.',
+        'sanitize_callback' => 'sanitize_textarea_field',
+    ));
+    $wp_customize->add_control('lp_vision_text', array(
+        'label'   => __('Texto Visión', 'latin-party'),
+        'section' => 'lp_nosotros_section',
+        'type'    => 'textarea',
+    ));
 }
 add_action('customize_register', 'latin_party_customize_register');
 

@@ -8,8 +8,24 @@
 
 get_header();
 
-$page_title = lp_get_field('lp_serv_page_title', false, 'Todo lo que necesitas para tu evento en un solo lugar');
-$page_desc  = lp_get_field('lp_serv_page_desc', false, 'En Latin Party Eventos ofrecemos soluciones completas para cada tipo de celebración. Desde el sonido profesional, la iluminación y la ambientación, hasta la producción integral de conciertos, bodas y eventos corporativos.');
+$page_title = lp_get_setting('lp_serv_page_title', 'Todo lo que necesitas para tu evento en un solo lugar');
+$page_desc  = lp_get_setting('lp_serv_page_desc', 'En Latin Party Eventos ofrecemos soluciones completas para cada tipo de celebración. Desde el sonido profesional, la iluminación y la ambientación, hasta la producción integral de conciertos, bodas y eventos corporativos.');
+
+$audio_badge = lp_get_setting('lp_serv_audio_badge', 'Potencia Acústica');
+$audio_title = lp_get_setting('lp_serv_audio_title', 'Soluciones de Audio Profesional');
+$audio_desc  = lp_get_setting('lp_serv_audio_desc', 'Configuraciones acústicas de vanguardia calibradas digitalmente para garantizar máxima inteligibilidad de la voz y calidez sonora en cada rincón del recinto.');
+
+$lights_badge = lp_get_setting('lp_serv_lights_badge', 'Shows Visuales');
+$lights_title = lp_get_setting('lp_serv_lights_title', 'Iluminación Creativa & Control DMX');
+$lights_desc  = lp_get_setting('lp_serv_lights_desc', 'Crea atmósferas envolventes y sincronizadas que realzan momentos clave como el vals, el brindis o la apertura del baile.');
+
+$led_badge = lp_get_setting('lp_serv_led_badge', 'Estructuras & Baile');
+$led_title = lp_get_setting('lp_serv_led_title', 'Pistas de Baile LED, Tarimas y Carpas');
+$led_desc  = lp_get_setting('lp_serv_led_desc', 'Infraestructura sólida con certificación técnica para eventos al aire libre o en salones cerrados.');
+
+$cta_title = lp_get_setting('lp_serv_cta_title', '¿Necesitas un paquete personalizado?');
+$cta_desc  = lp_get_setting('lp_serv_cta_desc', 'Armamos la combinación perfecta de sonido, luces, pista LED y carpas según tu presupuesto y cantidad de invitados.');
+$cta_btn   = lp_get_setting('lp_serv_cta_btn', 'Hablar con un Asesor');
 ?>
 
 <main id="primary" class="site-main">
@@ -29,10 +45,10 @@ $page_desc  = lp_get_field('lp_serv_page_desc', false, 'En Latin Party Eventos o
 
             <!-- 1. Audio Profesional -->
             <div style="margin-bottom: 70px;">
-                <span class="section-badge">Potencia Acústica</span>
-                <h2 style="font-size: 2.2rem; margin-bottom: 15px;">Soluciones de Audio Profesional</h2>
+                <span class="section-badge"><?php echo esc_html($audio_badge); ?></span>
+                <h2 style="font-size: clamp(1.8rem, 4vw, 2.3rem); margin-bottom: 15px;"><?php echo esc_html($audio_title); ?></h2>
                 <p style="color: var(--text-muted); max-width: 800px; margin-bottom: 30px;">
-                    Configuraciones acústicas de vanguardia calibradas digitalmente para garantizar máxima inteligibilidad de la voz y calidez sonora en cada rincón del recinto.
+                    <?php echo esc_html($audio_desc); ?>
                 </p>
 
                 <div class="service-spec-grid">
@@ -64,10 +80,10 @@ $page_desc  = lp_get_field('lp_serv_page_desc', false, 'En Latin Party Eventos o
 
             <!-- 2. Iluminación que Transforma Espacios -->
             <div style="margin-bottom: 70px;">
-                <span class="section-badge gold">Shows Visuales</span>
-                <h2 style="font-size: 2.2rem; margin-bottom: 15px;">Iluminación Creativa &amp; Control DMX</h2>
+                <span class="section-badge gold"><?php echo esc_html($lights_badge); ?></span>
+                <h2 style="font-size: clamp(1.8rem, 4vw, 2.3rem); margin-bottom: 15px;"><?php echo esc_html($lights_title); ?></h2>
                 <p style="color: var(--text-muted); max-width: 800px; margin-bottom: 30px;">
-                    Crea atmósferas envolventes y sincronizadas que realzan momentos clave como el vals, el brindis o la apertura del baile.
+                    <?php echo esc_html($lights_desc); ?>
                 </p>
 
                 <div class="service-spec-grid">
@@ -99,10 +115,10 @@ $page_desc  = lp_get_field('lp_serv_page_desc', false, 'En Latin Party Eventos o
 
             <!-- 3. Pistas LED & Tarimas -->
             <div style="margin-bottom: 70px;">
-                <span class="section-badge">Estructuras &amp; Baile</span>
-                <h2 style="font-size: 2.2rem; margin-bottom: 15px;">Pistas de Baile LED, Tarimas y Carpas</h2>
+                <span class="section-badge"><?php echo esc_html($led_badge); ?></span>
+                <h2 style="font-size: clamp(1.8rem, 4vw, 2.3rem); margin-bottom: 15px;"><?php echo esc_html($led_title); ?></h2>
                 <p style="color: var(--text-muted); max-width: 800px; margin-bottom: 30px;">
-                    Infraestructura sólida con certificación técnica para eventos al aire libre o en salones cerrados.
+                    <?php echo esc_html($led_desc); ?>
                 </p>
 
                 <div class="service-spec-grid">
@@ -136,12 +152,12 @@ $page_desc  = lp_get_field('lp_serv_page_desc', false, 'En Latin Party Eventos o
             <div class="banner-advisory" style="margin-top: 40px;">
                 <div class="banner-advisory-inner">
                     <div>
-                        <h3 style="font-size: 1.8rem; margin-bottom: 10px;">¿Necesitas un paquete personalizado?</h3>
-                        <p style="color: var(--text-muted);">Armamos la combinación perfecta de sonido, luces, pista LED y carpas según tu presupuesto y cantidad de invitados.</p>
+                        <h3 style="font-size: clamp(1.4rem, 3.5vw, 1.8rem); margin-bottom: 10px;"><?php echo esc_html($cta_title); ?></h3>
+                        <p style="color: var(--text-muted);"><?php echo esc_html($cta_desc); ?></p>
                     </div>
                     <div>
                         <a href="<?php echo esc_url(lp_whatsapp_url('¡Hola! Deseo cotizar un paquete personalizado de servicios para mi evento.')); ?>" target="_blank" rel="noopener" class="btn btn-teal">
-                            <i class="fa-brands fa-whatsapp"></i> Hablar con un Asesor
+                            <i class="fa-brands fa-whatsapp"></i> <?php echo esc_html($cta_btn); ?>
                         </a>
                     </div>
                 </div>

@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('LATIN_PARTY_VERSION', '1.1.0');
+define('LATIN_PARTY_VERSION', '1.2.0');
 define('LATIN_PARTY_DIR', get_template_directory());
 define('LATIN_PARTY_URI', get_template_directory_uri());
 

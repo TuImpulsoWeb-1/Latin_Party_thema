@@ -1613,6 +1613,14 @@ h1, h2, h3, h4, h5, h6 {
 /* ==========================================================================
    Form Styles (Contact & Cotización)
    ========================================================================== */
+.contact-form-container {
+    width: 100%;
+    max-width: 820px;
+    margin: 40px auto 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .contact-form-wrap {
     background: var(--bg-card);
     border: 1px solid var(--border-glass);
@@ -1620,17 +1628,25 @@ h1, h2, h3, h4, h5, h6 {
     padding: 36px 30px;
     box-shadow: var(--shadow-card);
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 @media (max-width: 600px) {
+    .contact-form-container {
+        margin-top: 25px;
+    }
     .contact-form-wrap {
-        padding: 22px 16px;
+        padding: 24px 14px;
+        border-radius: var(--radius-sm);
     }
 }
 
 .form-group {
     margin-bottom: 18px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .form-label {
@@ -1643,10 +1659,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-control {
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     background: rgba(10, 15, 25, 0.7);
     border: 1px solid rgba(255, 255, 255, 0.14);
     border-radius: var(--radius-sm);
-    padding: 12px 16px;
+    padding: 12px 14px;
     color: #ffffff;
     font-size: 16px; /* Prevents auto-zoom on mobile */
     transition: var(--transition);
@@ -1663,12 +1681,52 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
     .form-row-2 {
-        grid-template-columns: 1fr;
-        gap: 0;
+        display: block;
+        width: 100%;
+    }
+    .form-row-2 .form-group {
+        margin-bottom: 16px;
+    }
+}
+
+.contact-social-wrap {
+    margin-top: 35px;
+    text-align: center;
+    border-top: 1px solid var(--border-glass);
+    padding-top: 25px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-social-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 500px) {
+    .contact-social-buttons {
+        gap: 8px;
+    }
+    .contact-social-buttons .btn {
+        flex: 1 1 calc(50% - 8px);
+        min-width: 120px;
+        padding: 9px 8px;
+        font-size: 0.8rem;
+        justify-content: center;
+    }
+    .contact-social-buttons .btn:last-child {
+        flex: 1 1 100%;
     }
 }
 
@@ -1810,6 +1868,9 @@ h1, h2, h3, h4, h5, h6 {
     padding: 22px 16px;
     text-align: center;
     transition: var(--transition);
+    min-width: 0;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .contact-icon-box {

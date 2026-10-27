@@ -8,11 +8,14 @@
 
 get_header();
 
-$mision_t = lp_get_field('lp_mision_title', false, 'Nuestra Misión');
-$mision_c = lp_get_field('lp_mision_text', false, 'Ofrecer alternativas efectivas, eficaces y eficientes en la creación, diseño, organización y ejecución de eventos sociales y empresariales. Crear un ambiente óptimo con calidad, seriedad y cumplimiento, garantizando una ocasión inolvidable.');
+$hero_title = lp_get_setting('lp_nosotros_hero_title', 'Tu Celebración, Nuestro Legado');
+$hero_desc  = lp_get_setting('lp_nosotros_hero_desc', 'En Latin Party Eventos nos especializamos en diseñar experiencias memorables que combinan tecnología, pasión, profesionalismo y excelencia en cada detalle.');
 
-$vision_t = lp_get_field('lp_vision_title', false, 'Nuestra Visión');
-$vision_c = lp_get_field('lp_vision_text', false, 'Queremos que LATIN PARTY EVENTOS sea una empresa líder en organización y producción de eventos sociales y corporativos, con presencia y reconocimiento a nivel nacional, basada en el profesionalismo y la calidad humana de nuestro personal.');
+$mision_t = lp_get_setting('lp_mision_title', 'Nuestra Misión');
+$mision_c = lp_get_setting('lp_mision_text', 'Ofrecer alternativas efectivas, eficaces y eficientes en la creación, diseño, organización y ejecución de eventos sociales y empresariales. Crear un ambiente óptimo con calidad, seriedad y cumplimiento, garantizando una ocasión inolvidable.');
+
+$vision_t = lp_get_setting('lp_vision_title', 'Nuestra Visión');
+$vision_c = lp_get_setting('lp_vision_text', 'Queremos que LATIN PARTY EVENTOS sea una empresa líder en organización y producción de eventos sociales y corporativos, con presencia y reconocimiento a nivel nacional, basada en el profesionalismo y la calidad humana de nuestro personal.');
 ?>
 
 <main id="primary" class="site-main">
@@ -21,8 +24,8 @@ $vision_c = lp_get_field('lp_vision_text', false, 'Queremos que LATIN PARTY EVEN
     <section class="page-hero">
         <div class="container">
             <span class="section-badge gold">Nuestra Historia &bull; Valores</span>
-            <h1 class="page-hero-title">Tu Celebración, <span class="highlight-gold">Nuestro Legado</span></h1>
-            <p class="page-hero-desc">En Latin Party Eventos nos especializamos en diseñar experiencias memorables que combinan tecnología, pasión, profesionalismo y excelencia en cada detalle.</p>
+            <h1 class="page-hero-title"><?php echo esc_html($hero_title); ?></h1>
+            <p class="page-hero-desc"><?php echo esc_html($hero_desc); ?></p>
         </div>
     </section>
 

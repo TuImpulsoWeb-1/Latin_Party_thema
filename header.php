@@ -26,6 +26,16 @@ $btn_url = ($btn_action === 'contacto')
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <meta name="description" content="<?php echo esc_attr(get_bloginfo('description') ?: 'Latin Party Eventos - Producción integral de eventos sociales y corporativos, sonido profesional, iluminación DMX, pantallas LED y tarimas en Colombia.'); ?>">
 
+    <!-- Favicon & Brand Icons -->
+    <?php if (function_exists('has_site_icon') && has_site_icon()) : ?>
+        <?php wp_site_icon(); ?>
+    <?php else : ?>
+        <link rel="icon" type="image/png" sizes="32x32" href="<?php echo esc_url(get_template_directory_uri() . '/assets/images/favicon/favicon-32x32.png'); ?>">
+        <link rel="icon" type="image/png" sizes="16x16" href="<?php echo esc_url(get_template_directory_uri() . '/assets/images/favicon/favicon-16x16.png'); ?>">
+        <link rel="apple-touch-icon" sizes="180x180" href="<?php echo esc_url(get_template_directory_uri() . '/assets/images/favicon/apple-touch-icon.png'); ?>">
+        <link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri() . '/assets/images/favicon/favicon.ico'); ?>">
+    <?php endif; ?>
+
     <?php wp_head(); ?>
 </head>
 

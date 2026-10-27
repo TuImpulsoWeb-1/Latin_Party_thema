@@ -1,0 +1,54 @@
+/*
+Theme Name: Latin Party Eventos
+Theme URI: https://latinpartyeventos.com
+Author: Latin Party Eventos Team
+Author URI: https://latinpartyeventos.com
+Description: Tema premium oficial para Latin Party Eventos. Totalmente personalizable mediante Advanced Custom Fields (ACF). Especializado en producción integral de eventos, bodas, 15 años, corporativos, sonido profesional, iluminación DMX, pantallas gigantes, pistas LED, tarimas y carpas. Diseñado con estética de lujo moderna, glassmorphism y optimización SEO.
+Version: 1.1.0
+Tested up to: 6.7
+Requires at least: 6.0
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: latin-party
+GitHub Theme URI: TuImpulsoWeb-1/Latin_Party_thema
+Tags: custom-background, custom-logo, custom-menu, featured-images, flexible-header, full-width-template, theme-options, translation-ready, dark-mode, events
+*/
+
+/* Reset & Baseline */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background-color: #0b121e;
+    color: #edf6f3;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img, video, svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+button, input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+}

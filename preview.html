@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latin Party Eventos - Producción Integral de Eventos | Vista Previa</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Theme Stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <style>
+        /* Interactive Preview Navigation Switcher */
+        .preview-bar {
+            background: linear-gradient(90deg, #111a28, #1c2a3c);
+            border-bottom: 2px solid var(--teal-primary);
+            color: #ffffff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 0.85rem;
+            position: sticky;
+            top: 0;
+            z-index: 10000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        .preview-badge {
+            background: var(--teal-primary);
+            color: #0b121e;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+        }
+        .view-btn {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #ffffff;
+            padding: 5px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.82rem;
+            transition: all 0.2s ease;
+        }
+        .view-btn:hover, .view-btn.active {
+            background: var(--gold-primary);
+            color: #0b121e;
+            border-color: var(--gold-primary);
+            font-weight: 600;
+        }
+        .page-view {
+            display: none;
+        }
+        .page-view.active {
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .preview-bar {
+                padding: 6px 12px;
+                font-size: 0.75rem;
+            }
+            .preview-bar > div:first-child {
+                display: none;
+            }
+            .preview-bar > div:last-child {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 5px;
+            }
+            .view-btn {
+                padding: 4px 10px;
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Demo Bar (For immediate local review) -->
+    <div class="preview-bar">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <span class="preview-badge">Demo Tema WordPress</span>
+            <span><strong>Latin Party Eventos</strong> &bull; 100% Compatible con ACF</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="color: var(--text-muted); margin-right: 4px;">Cambiar Vista:</span>
+            <button class="view-btn active" onclick="switchView('home')">Inicio (Home)</button>
+            <button class="view-btn" onclick="switchView('servicios')">Servicios</button>
+            <button class="view-btn" onclick="switchView('nosotros')">Nosotros</button>
+            <button class="view-btn" onclick="switchView('contacto')">Contacto</button>
+        </div>
+    </div>
+
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-contact">
+                <a href="tel:+573118487785"><i class="fa-solid fa-phone"></i> +57 311 8487785</a>
+                <a href="mailto:contacto@latinpartyeventos.com"><i class="fa-solid fa-envelope"></i> contacto@latinpartyeventos.com</a>
+                <span><i class="fa-solid fa-location-dot"></i> Bogotá, Colombia</span>
+            </div>
+            <div class="top-bar-social">
+                <a href="https://www.facebook.com/share/17BwWKdEBR/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/latinparty?igsh=cWtsYWliY2pod2p5" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.link/p2g3qg" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="site-header" id="site-header">
+        <div class="container">
+            <div class="navbar">
+                <div class="site-branding">
+                    <a href="javascript:switchView('home')" class="site-logo-link">
+                        <img src="./assets/images/logo.png" alt="Latin Party Eventos" class="site-logo-img">
+                        <div class="logo-text-wrap">
+                            <span class="logo-title">Latin Party</span>
+                            <span class="logo-tagline">Eventos & Producción</span>
+                        </div>
+                    </a>
+                </div>
+
+                <nav class="main-nav">
+                    <ul class="nav-links">
+                        <li><a href="javascript:switchView('home')" class="nav-link nav-home active">Home</a></li>
+                        <li><a href="javascript:switchView('servicios')" class="nav-link nav-servicios">Servicios</a></li>
+                        <li><a href="javascript:switchView('nosotros')" class="nav-link nav-nosotros">Nosotros</a></li>
+                        <li><a href="javascript:switchView('contacto')" class="nav-link nav-contacto">Contacto</a></li>
+                    </ul>
+
+                    <div class="header-cta">
+                        <a href="https://wa.link/p2g3qg" target="_blank" rel="noopener" class="btn btn-teal btn-sm">
+                            <i class="fa-brands fa-whatsapp"></i> Cotizar
+                        </a>
+                    </div>
+                </nav>
+
+                <button class="mobile-menu-toggle" aria-label="Abrir Menú">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer-overlay"></div>
+    <div class="mobile-drawer">
+        <button class="mobile-drawer-close" aria-label="Cerrar Menú">&times;</button>
+        <div style="margin-bottom: 25px;">
+            <img src="./assets/images/logo.png" alt="Latin Party Eventos" style="height: 48px; border-radius: 6px;">
+        </div>
+        <ul class="nav-links">
+            <li><a href="javascript:switchView('home')" class="nav-link">Home</a></li>
+            <li><a href="javascript:switchView('servicios')" class="nav-link">Servicios</a></li>
+            <li><a href="javascript:switchView('nosotros')" class="nav-link">Nosotros</a></li>
+            <li><a href="javascript:switchView('contacto')" class="nav-link">Contacto</a></li>
+        </ul>
+        <div style="margin-bottom: 25px;">
+            <a href="https://wa.link/p2g3qg" target="_blank" rel="noopener" class="btn btn-teal" style="width: 100%;">
+                <i class="fa-brands fa-whatsapp"></i> Hablar por WhatsApp
+            </a>
+        </div>
+        <div class="mobile-drawer-contact">
+            <p><i class="fa-solid fa-phone"></i> +57 311 8487785</p>
+            <p><i class="fa-solid fa-envelope"></i> contacto@latinpartyeventos.com</p>
+            <p><i class="fa-solid fa-location-dot"></i> Bogotá, Colombia</p>
+        </div>
+    </div>
+
+    <!-- =======================================================================
+         VIEW 1: HOME PAGE
+         ======================================================================= -->
+    <div id="view-home" class="page-view active">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-bg-slider" aria-hidden="true">
+                <div class="hero-slide active" style="background-image: url('./assets/images/hero/hero-1.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('./assets/images/hero/hero-2.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('./assets/images/hero/hero-3.jpg');"></div>
+            </div>
+            <div class="hero-overlay" aria-hidden="true"></div>
+
+            <div class="container">
+                <div class="hero-content">
+                    <span class="section-badge">⭐ Producción Integral de Eventos</span>
+                    <h1 class="hero-title">
+                        Vive la fiesta, nosotros la creamos
+                        <span class="highlight-gold" style="display: block;">Eventos que combinan confianza, estilo y diversión</span>
+                    </h1>
+                    <p class="hero-description">
+                        En Latin Party Eventos convertimos tus ideas en experiencias únicas. Desde bodas y 15 años hasta eventos corporativos y conciertos, nuestro equipo se encarga de cada detalle.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="javascript:switchView('contacto')" class="btn btn-gold">
+                            <i class="fa-solid fa-calendar-check"></i> Empieza tu evento hoy
+                        </a>
+                        <a href="https://wa.link/p2g3qg" target="_blank" rel="noopener" class="btn btn-teal">
+                            <i class="fa-brands fa-whatsapp"></i> Hablar por WhatsApp
+                        </a>
+                    </div>
+
+                    <!-- Stats Row -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">+15</div>
+                            <div class="stat-label">Años de Experiencia</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">+1,200</div>
+                            <div class="stat-label">Eventos Exitosos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Satisfacción Garantizada</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">PRO</div>
+                            <div class="stat-label">Equipos Propios DMX & LED</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advisory Banner -->
+        <div class="container">
+            <section class="banner-advisory">
+                <div class="banner-advisory-inner">
+                    <div class="banner-advisory-text">
+                        <span class="section-badge gold" style="margin-bottom: 8px;">Asesoría Gratuita</span>
+                        <h2 class="banner-advisory-title">Asesoría Personalizada Sin Costo</h2>
+                        <p class="banner-advisory-desc">Convierte tu idea en un evento inolvidable. Agenda una sesión gratuita con nuestros expertos y descubre cómo darle vida a tu celebración, sin compromiso.</p>
+                    </div>
+                    <div>
+                        <a href="https://wa.link/p2g3qg" target="_blank" rel="noopener" class="btn btn-teal">
+                            <i class="fa-solid fa-comments"></i> Agendar Asesoría Gratuita
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Event Categories -->
+        <section class="section-padding" id="eventos">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Celebraciones Exclusivas</span>
+                    <h2 class="section-title">Nuestros Eventos</h2>
+                    <p class="section-subtitle">Cada celebración es única, por eso en Latin Party Eventos diseñamos experiencias a tu medida. Desde cumpleaños y bodas hasta fiestas corporativas y conciertos.</p>
+                </div>
+
+                <div class="events-grid">
+                    <a href="javascript:switchView('servicios')" class="event-card">
+                        <img src="./assets/images/categorias/15-anos.jpg" alt="15 Años" class="event-card-img" loading="lazy">
+                        <div class="event-card-overlay"></div>
+                        <div class="event-card-content">
+                            <span class="event-badge">Celebración Soñada</span>
+                            <h3 class="event-card-title">15 Años</h3>
+                            <p class="event-card-desc">Montajes inolvidables con luces robóticas, pista LED de baile, efectos especiales y sonido de primer nivel.</p>
+                            <span class="event-card-link-arrow">Ver detalles <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="javascript:switchView('servicios')" class="event-card">
+                        <img src="./assets/images/categorias/bodas.jpg" alt="Bodas" class="event-card-img" loading="lazy">
+                        <div class="event-card-overlay"></div>
+                        <div class="event-card-content">
+                            <span class="event-badge">Elegancia & Romance</span>
+                            <h3 class="event-card-title">Bodas</h3>
+                            <p class="event-card-desc">Atmósferas cálidas, iluminación perimetral sutil, drapeados en telas, sonido de ceremonia y fiesta nupcial.</p>
+                            <span class="event-card-link-arrow">Ver detalles <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="javascript:switchView('servicios')" class="event-card">
+                        <img src="./assets/images/categorias/corporativos.jpg" alt="Eventos Corporativos" class="event-card-img" loading="lazy">
+                        <div class="event-card-overlay"></div>
+                        <div class="event-card-content">
+                            <span class="event-badge">Impacto de Marca</span>
+                            <h3 class="event-card-title">Corporativos</h3>
+                            <p class="event-card-desc">Congresos, lanzamientos de marca, ferias y fiestas de fin de año con tecnología audiovisual de vanguardia.</p>
+                            <span class="event-card-link-arrow">Ver detalles <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="javascript:switchView('servicios')" class="event-card">
+                        <img src="./assets/images/categorias/fiestas.jpg" alt="Fiestas y Conciertos" class="event-card-img" loading="lazy">
+                        <div class="event-card-overlay"></div>
+                        <div class="event-card-content">
+                            <span class="event-badge">Pura Energía</span>
+                            <h3 class="event-card-title">Fiestas</h3>
+                            <p class="event-card-desc">Conciertos privados, cumpleaños temáticos y aniversarios con tarimas modulares y pantallas gigantes.</p>
+                            <span class="event-card-link-arrow">Ver detalles <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section-padding" style="background: var(--bg-surface);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge gold">Tecnología de Punta</span>
+                    <h2 class="section-title">Nuestros Servicios</h2>
+                    <p class="section-subtitle">Equipamiento técnico profesional propio para garantizar que la potencia, el color y la calidad visual de tu evento sean impecables.</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-img-wrap">
+                            <img src="./assets/images/servicios/sonido.jpg" alt="Sonido Profesional" class="service-img" loading="lazy">
+                            <div class="service-icon-floating"><i class="fa-solid fa-volume-high"></i></div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Sonido Profesional</h3>
+                            <p class="service-desc">La potencia y claridad que tu evento merece. Desde sistemas convencionales hasta line array de gran formato, garantizamos una experiencia auditiva impecable.</p>
+                            <a href="javascript:switchView('servicios')" class="btn btn-outline btn-sm">Ver configuración <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-img-wrap">
+                            <img src="./assets/images/servicios/iluminacion.jpg" alt="Iluminación Creativa" class="service-img" loading="lazy">
+                            <div class="service-icon-floating"><i class="fa-solid fa-lightbulb"></i></div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Iluminación Creativa</h3>
+                            <p class="service-desc">Transformamos espacios con luces LED, cabezas móviles Beam/Spot y control DMX computarizado que generan atmósferas envolventes e inolvidables.</p>
+                            <a href="javascript:switchView('servicios')" class="btn btn-outline btn-sm">Ver configuración <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-img-wrap">
+                            <img src="./assets/images/servicios/pantallas.jpg" alt="Pantallas y Visuales" class="service-img" loading="lazy">
+                            <div class="service-icon-floating"><i class="fa-solid fa-tv"></i></div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Pantallas y Visuales</h3>
+                            <p class="service-desc">Impacta a tu público con pantallas LED de alta definición y proyectores de alto brillo, ideales para conciertos, bodas, ferias y eventos corporativos.</p>
+                            <a href="javascript:switchView('servicios')" class="btn btn-outline btn-sm">Ver configuración <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-img-wrap">
+                            <img src="./assets/images/servicios/tarimas.jpg" alt="Escenarios y Tarimas" class="service-img" loading="lazy">
+                            <div class="service-icon-floating"><i class="fa-solid fa-landmark"></i></div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Escenarios y Tarimas</h3>
+                            <p class="service-desc">Estructuras seguras, pasarelas, carpas tipo hangar y truss modulares en aluminio que se adaptan a cualquier tipo de espectáculo.</p>
+                            <a href="javascript:switchView('servicios')" class="btn btn-outline btn-sm">Ver configuración <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-img-wrap">
+                            <img src="./assets/images/servicios/pista-led.jpg" alt="Pistas de Baile LED" class="service-img" loading="lazy">
+                            <div class="service-icon-floating"><i class="fa-solid fa-border-all"></i></div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Pistas de Baile LED DMX</h3>
+                            <p class="service-desc">El centro de atracción de la fiesta. Módulos de cristal templado con efectos gráficos, nombres y destellos luminosos interactivos.</p>
+                            <a href="javascript:switchView('servicios')" class="btn btn-outline btn-sm">Ver configuración <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-img-wrap">
+                            <img src="./assets/images/servicios/mobiliario.jpg" alt="Mobiliario & Decoración" class="service-img" loading="lazy">
+                            <div class="service-icon-floating"><i class="fa-solid fa-couch"></i></div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Mobiliario &amp; Decoración</h3>
+                            <p class="service-desc">Cada detalle cuenta. Ofrecemos salas lounges, barras iluminadas, sillas modernas y drapeados en telas que realzan el estilo de tu celebración.</p>
+                            <a href="javascript:switchView('servicios')" class="btn btn-outline btn-sm">Ver configuración <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pillars -->
+        <section class="pillars-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge gold">Garantía de Calidad</span>
+                    <h2 class="section-title">Nuestros Pilares</h2>
+                    <p class="section-subtitle">El estándar de excelencia técnica y humana que respalda cada uno de nuestros montajes.</p>
+                </div>
+
+                <div class="pillars-grid">
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="fa-solid fa-user-tie"></i></div>
+                        <h3 class="pillar-title">Profesionalismo</h3>
+                        <p class="pillar-desc">Equipo humano comprometido, puntual y capacitado en cada área del evento.</p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="fa-solid fa-compact-disc"></i></div>
+                        <h3 class="pillar-title">Sonido Premium</h3>
+                        <p class="pillar-desc">Cero saturación ni acoples. Procesamiento digital de alta fidelidad.</p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <h3 class="pillar-title">Iluminación Dinámica</h3>
+                        <p class="pillar-desc">Shows sincronizados con consolas DMX operadas por profesionales.</p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="fa-solid fa-gem"></i></div>
+                        <h3 class="pillar-title">Mobiliario Elegante</h3>
+                        <p class="pillar-desc">Estética de gala y confort óptimo para todos tus invitados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Opiniones de Clientes</span>
+                    <h2 class="section-title">Lo que dicen <span class="highlight-gold">nuestros clientes</span></h2>
+                    <p class="section-subtitle">La satisfacción de cada anfitrión es nuestro mayor testimonio de compromiso y éxito.</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote-icon">&ldquo;</div>
+                        <div class="testimonial-rating">
+                            <span class="star-icon">&#9733;</span><span class="star-icon">&#9733;</span><span class="star-icon">&#9733;</span><span class="star-icon">&#9733;</span><span class="star-icon">&#9733;</span>
+                            <span class="testimonial-score">5/5</span>
+                        </div>
+                        <p class="testimonial-text">&ldquo;Contratamos a LatinPartyEventos para la celebración de los 15 años de mi hija y fue una experiencia inolvidable. Desde la decoración hasta la música, todo estuvo perfectamente coordinado. La atención fue muy profesional y nuestros invitados quedaron encantados. ¡Gracias por hacer de ese día algo tan especial!&rdquo;</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">L</div>
+                            <div>
+                                <div class="author-name">Laura Torres</div>
+                                <div class="author-city">Bogotá &bull; Celebración 15 Años</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote-icon">&ldquo;</div>
+                        <div class="testimonial-rating">
+                            <span class="star-icon">&#9733;</span><span class="star-icon">&#9733;</span><span class="star-icon">&#9733;</span><span class="star-icon">&#9733;</span><span class="star-icon">&#9733;</span>
+                            <span class="testimonial-score">5/5</span>
+                        </div>
+                        <p class="testimonial-text">&ldquo;Confiamos en LatinPartyEventos para la fiesta de fin de año de la empresa y superaron todas nuestras expectativas. La organización, la ambientación y la energía que lograron fue espectacular. Sin duda volveremos a trabajar con ellos para futuros eventos.&rdquo;</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">C</div>
+                            <div>
+                                <div class="author-name">Carolina Ramírez</div>
+                                <div class="author-city">Ibagué &bull; Evento Corporativo</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote-icon">&ldquo;</div>
+                        <div class="testimonial-rating">
+                            <span class="star-icon">&#9733;</span><span class="star-icon">&#9733;</span><span class="star-icon">&#9733;</span><span class="star-icon">&#9733;</span><span class="star-icon">&#9733;</span>
+                            <span class="testimonial-score">5/5</span>
+                        </div>
+                        <p class="testimonial-text">&ldquo;El montaje de sonido para nuestra boda y la pista de luces LED superaron completamente lo que soñamos. Todos los invitados no pararon de bailar toda la noche. ¡Recomendadísimos al 100%!&rdquo;</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">J</div>
+                            <div>
+                                <div class="author-name">Julián &amp; Andrea</div>
+                                <div class="author-city">Bogotá &bull; Boda Campestre</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="section-padding" style="background: var(--bg-surface);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge gold">Nuestros Trabajos</span>
+                    <h2 class="section-title">Galería de <span class="highlight-teal">Momentos Únicos</span></h2>
+                    <p class="section-subtitle">Explora fotografías reales de montajes producidos por nuestro equipo.</p>
+                </div>
+
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="social">Sociales &amp; Bodas</button>
+                    <button class="filter-btn" data-filter="corporate">Corporativos</button>
+                    <button class="filter-btn" data-filter="led">Pistas LED &amp; Luces</button>
+                    <button class="filter-btn" data-filter="tarimas">Tarimas &amp; Carpas</button>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="social led">
+                        <img src="./assets/images/galeria/galeria-1.jpg" alt="Montaje de Luces y Sonido Pro" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div>
+                            <span class="gallery-overlay-tag">Social • Luces</span>
+                            <h4 class="gallery-overlay-title">Montaje de Luces y Sonido Pro</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="social">
+                        <img src="./assets/images/galeria/galeria-2.jpg" alt="Recepción Social de Gala" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div>
+                            <span class="gallery-overlay-tag">Social</span>
+                            <h4 class="gallery-overlay-title">Recepción Social de Gala</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="corporate">
+                        <img src="./assets/images/galeria/galeria-3.jpg" alt="Conferencia Corporativa" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div>
+                            <span class="gallery-overlay-tag">Corporativo</span>
+                            <h4 class="gallery-overlay-title">Conferencia Corporativa</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="social led">
+                        <img src="./assets/images/galeria/galeria-4.jpg" alt="Pista de Luces e Iluminación DMX" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div>
+                            <span class="gallery-overlay-tag">Pista LED • Luces</span>
+                            <h4 class="gallery-overlay-title">Pista de Luces e Iluminación DMX</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="social">
+                        <img src="./assets/images/galeria/galeria-5.jpg" alt="Celebración 15 Años" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div>
+                            <span class="gallery-overlay-tag">Social</span>
+                            <h4 class="gallery-overlay-title">Celebración 15 Años</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="corporate">
+                        <img src="./assets/images/galeria/galeria-6.jpg" alt="Lanzamiento de Marca" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div>
+                            <span class="gallery-overlay-tag">Corporativo</span>
+                            <h4 class="gallery-overlay-title">Lanzamiento de Marca</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="social">
+                        <img src="./assets/images/galeria/galeria-7.jpg" alt="Salón VIP Hotel Tequendama" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div>
+                            <span class="gallery-overlay-tag">Social</span>
+                            <h4 class="gallery-overlay-title">Salón VIP Hotel Tequendama</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="social">
+                        <img src="./assets/images/galeria/galeria-8.jpg" alt="Boda en Gran Salón" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div>
+                            <span class="gallery-overlay-tag">Social</span>
+                            <h4 class="gallery-overlay-title">Boda en Gran Salón</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="led">
+                        <img src="./assets/images/galeria/galeria-9.jpg" alt="Pista de Baile LED DMX" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div>
+                            <span class="gallery-overlay-tag">Pista LED</span>
+                            <h4 class="gallery-overlay-title">Pista de Baile LED DMX</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="tarimas">
+                        <img src="./assets/images/galeria/galeria-10.jpg" alt="Tarima y Estructura Modular" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div>
+                            <span class="gallery-overlay-tag">Tarimas & Carpas</span>
+                            <h4 class="gallery-overlay-title">Tarima y Estructura Modular</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="corporate tarimas">
+                        <img src="./assets/images/galeria/galeria-11.jpg" alt="Evento Empresarial y Backing" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div>
+                            <span class="gallery-overlay-tag">Corporativo • Tarimas</span>
+                            <h4 class="gallery-overlay-title">Evento Empresarial y Backing</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="led social">
+                        <img src="./assets/images/galeria/galeria-12.jpg" alt="Show de Cabezas Móviles y Neón" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div>
+                            <span class="gallery-overlay-tag">Luces • Neón</span>
+                            <h4 class="gallery-overlay-title">Show de Cabezas Móviles y Neón</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- =======================================================================
+         VIEW 2: SERVICIOS PAGE
+         ======================================================================= -->
+    <div id="view-servicios" class="page-view">
+        <section class="page-hero">
+            <div class="container">
+                <span class="section-badge gold">Nuestras Soluciones</span>
+                <h1 class="page-hero-title">Todo lo que necesitas para tu evento en un solo lugar</h1>
+                <p class="page-hero-desc">En Latin Party Eventos ofrecemos soluciones completas para cada tipo de celebración. Desde el sonido profesional, la iluminación y la ambientación, hasta la producción integral de conciertos, bodas y eventos corporativos.</p>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div style="margin-bottom: 70px;">
+                    <span class="section-badge">Potencia Acústica</span>
+                    <h2 style="font-size: 2.2rem; margin-bottom: 15px;">Soluciones de Audio Profesional</h2>
+                    <p style="color: var(--text-muted); max-width: 800px; margin-bottom: 30px;">
+                        Configuraciones acústicas de vanguardia calibradas digitalmente para garantizar máxima inteligibilidad de la voz y calidez sonora en cada rincón del recinto.
+                    </p>
+                    <div class="service-spec-grid">
+                        <div class="service-spec-card">
+                            <div class="spec-badge">Hasta 100 Personas</div>
+                            <h3 class="spec-title">Sonido Convencional</h3>
+                            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">Ideal para eventos íntimos, matrimonios civiles, 15 años y salones medianos. Altavoces de alta fidelidad y microfonía inalámbrica.</p>
+                        </div>
+                        <div class="service-spec-card" style="border-color: var(--border-accent);">
+                            <div class="spec-badge" style="color: var(--teal-primary);">Gran Formato</div>
+                            <h3 class="spec-title">Sonido Line Array</h3>
+                            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">Para conciertos, festivales y recintos masivos. Distribución de presión sonora uniforme en grandes distancias.</p>
+                        </div>
+                        <div class="service-spec-card">
+                            <div class="spec-badge">Espectáculos Vivos</div>
+                            <h3 class="spec-title">Sonido Tipo Concierto</h3>
+                            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">Configuración completa para orquestas y bandas en vivo: microfonía instrumental Shure/Sennheiser y consolas digitales.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 70px;">
+                    <span class="section-badge gold">Shows Visuales</span>
+                    <h2 style="font-size: 2.2rem; margin-bottom: 15px;">Iluminación Creativa &amp; Control DMX</h2>
+                    <p style="color: var(--text-muted); max-width: 800px; margin-bottom: 30px;">
+                        Crea atmósferas envolventes y sincronizadas que realzan momentos clave como el vals, el brindis o la apertura del baile.
+                    </p>
+                    <div class="service-spec-grid">
+                        <div class="service-spec-card">
+                            <div class="spec-badge">Dinámicas 360°</div>
+                            <h3 class="spec-title">Cabezas Móviles Beam &amp; Spot</h3>
+                            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">Efectos de prisma, gobos personalizados con tu logo o iniciales y haces de luz potentes que llenan todo el salón.</p>
+                        </div>
+                        <div class="service-spec-card">
+                            <div class="spec-badge">Software Computarizado</div>
+                            <h3 class="spec-title">Control DMX en Tiempo Real</h3>
+                            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">Programación milimétrica por escenas. Cambios de color acordes a la temática de la decoración y sincronía total.</p>
+                        </div>
+                        <div class="service-spec-card">
+                            <div class="spec-badge">Ambientación Perimetral</div>
+                            <h3 class="spec-title">Par LED, Neón &amp; City Color</h3>
+                            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">Baño de luz a paredes, columnas y jardines para transformar salones comunes en espacios de alta sofisticación.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- =======================================================================
+         VIEW 3: NOSOTROS PAGE
+         ======================================================================= -->
+    <div id="view-nosotros" class="page-view">
+        <section class="page-hero">
+            <div class="container">
+                <span class="section-badge gold">Nuestra Historia &bull; Valores</span>
+                <h1 class="page-hero-title">Tu Celebración, <span class="highlight-gold">Nuestro Legado</span></h1>
+                <p class="page-hero-desc">En Latin Party Eventos nos especializamos en diseñar experiencias memorables que combinan tecnología, pasión, profesionalismo y excelencia en cada detalle.</p>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px; margin-bottom: 70px;">
+                    <div class="value-card" style="padding: 40px 35px;">
+                        <span class="section-badge" style="margin-bottom: 15px;">Propósito Fundamental</span>
+                        <h2 style="font-size: 2rem; margin-bottom: 18px;">Nuestra Misión</h2>
+                        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.75;">
+                            Ofrecer alternativas efectivas, eficaces y eficientes en la creación, diseño, organización y ejecución de eventos sociales y empresariales. Crear un ambiente óptimo con calidad, seriedad y cumplimiento, garantizando una ocasión inolvidable.
+                        </p>
+                    </div>
+
+                    <div class="value-card gold-edge" style="padding: 40px 35px;">
+                        <span class="section-badge gold" style="margin-bottom: 15px;">Hacia el Futuro</span>
+                        <h2 style="font-size: 2rem; margin-bottom: 18px;">Nuestra Visión</h2>
+                        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.75;">
+                            Queremos que LATIN PARTY EVENTOS sea una empresa líder en organización y producción de eventos sociales y corporativos, con presencia y reconocimiento a nivel nacional, basada en el profesionalismo y la calidad humana de nuestro personal.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="section-header">
+                    <span class="section-badge">Principios de Trabajo</span>
+                    <h2 class="section-title">Nuestros <span class="highlight-teal">Valores</span></h2>
+                    <p class="section-subtitle">En cada proyecto ponemos en práctica principios que garantizan experiencias únicas y exitosas.</p>
+                </div>
+
+                <div class="values-grid">
+                    <div class="value-card">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #ffffff;"><i class="fa-solid fa-award" style="color: var(--teal-primary); margin-right: 8px;"></i> Profesionalismo</h3>
+                        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">Un equipo técnico y logístico altamente capacitado en cada área del evento.</p>
+                    </div>
+                    <div class="value-card gold-edge">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #ffffff;"><i class="fa-solid fa-clock" style="color: var(--gold-light); margin-right: 8px;"></i> Ahorro de Tiempo y Recursos</h3>
+                        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">Nos encargamos de todo el proceso para que tú te enfoques en disfrutar.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #ffffff;"><i class="fa-solid fa-chart-line" style="color: var(--teal-primary); margin-right: 8px;"></i> Mayor Visibilidad de Marca</h3>
+                        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">Potenciamos el posicionamiento de tu marca con montajes de alto impacto.</p>
+                    </div>
+                    <div class="value-card gold-edge">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #ffffff;"><i class="fa-solid fa-shield-halved" style="color: var(--gold-light); margin-right: 8px;"></i> Cumplimiento &amp; Calidad</h3>
+                        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">Puntualidad rigurosa en el montaje y pruebas de sonido anticipadas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- =======================================================================
+         VIEW 4: CONTACTO PAGE
+         ======================================================================= -->
+    <div id="view-contacto" class="page-view">
+        <section class="page-hero">
+            <div class="container">
+                <span class="section-badge gold">Atención Inmediata</span>
+                <h1 class="page-hero-title">Tu Celebración, <span class="highlight-gold">Nuestro Legado</span></h1>
+                <p class="page-hero-desc">¿Planeando un evento inolvidable? Nuestro equipo está listo para asesorarte y crear la mejor experiencia para ti y tus invitados. Déjanos tus datos y recibe una cotización gratuita en minutos.</p>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div class="contact-info-grid">
+                    <div class="contact-info-card">
+                        <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
+                        <h3 style="font-size: 1.15rem; margin-bottom: 6px;">Línea Telefónica</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px;">Atención de lunes a sábado</p>
+                        <a href="tel:+573118487785" style="color: var(--gold-light); font-weight: 700;">+57 311 8487785</a>
+                    </div>
+                    <div class="contact-info-card" style="border-color: var(--border-accent);">
+                        <div class="contact-icon-box" style="background: rgba(37, 211, 102, 0.15); color: #25d366;"><i class="fa-brands fa-whatsapp"></i></div>
+                        <h3 style="font-size: 1.15rem; margin-bottom: 6px;">WhatsApp Oficial</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px;">Respuesta rápida</p>
+                        <a href="https://wa.link/p2g3qg" target="_blank" rel="noopener" class="btn btn-teal btn-sm">Chatear Ahora</a>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-icon-box"><i class="fa-solid fa-envelope"></i></div>
+                        <h3 style="font-size: 1.15rem; margin-bottom: 6px;">Correo de Contacto</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px;">Propuestas y cotizaciones</p>
+                        <a href="mailto:contacto@latinpartyeventos.com" style="color: var(--teal-primary); font-size: 0.88rem;">contacto@latinpartyeventos.com</a>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                        <h3 style="font-size: 1.15rem; margin-bottom: 6px;">Sede &amp; Cobertura</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 6px;">Bogotá, Colombia</p>
+                        <span style="font-size: 0.82rem; color: var(--gold-light);">Servicio a Nivel Nacional</span>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div style="max-width: 820px; margin: 40px auto 0 auto;">
+                    <div class="contact-form-wrap">
+                        <div style="text-align: center; margin-bottom: 30px;">
+                            <span class="section-badge gold">Cotización Gratuita</span>
+                            <h2 style="font-size: 2rem; margin-bottom: 10px;">Diseñemos juntos tu <span class="highlight-gold">evento</span></h2>
+                            <p style="color: var(--text-muted); font-size: 0.95rem;">Completa el formulario y nos contactaremos de inmediato.</p>
+                        </div>
+
+                        <form id="latin-party-contact-form" method="post">
+                            <div class="form-row-2">
+                                <div class="form-group">
+                                    <label class="form-label" for="client_name">Tu Nombre *</label>
+                                    <input type="text" id="client_name" name="client_name" class="form-control" placeholder="Ej: Diana Gómez" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="client_phone">Celular o WhatsApp *</label>
+                                    <input type="tel" id="client_phone" name="client_phone" class="form-control" placeholder="Ej: 311 8487785" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row-2">
+                                <div class="form-group">
+                                    <label class="form-label" for="client_email">Correo Electrónico</label>
+                                    <input type="email" id="client_email" name="client_email" class="form-control" placeholder="nombre@correo.com">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="event_type">Servicio de Interés</label>
+                                    <select id="event_type" name="event_type" class="form-control">
+                                        <option value="Boda Completa">Boda Completa</option>
+                                        <option value="Celebración 15 Años">Celebración 15 Años</option>
+                                        <option value="Evento Corporativo / Fin de Año">Evento Corporativo / Fin de Año</option>
+                                        <option value="Sonido Profesional Line Array">Sonido Profesional Line Array</option>
+                                        <option value="Iluminación DMX y Cabezas Móviles">Iluminación DMX y Cabezas Móviles</option>
+                                        <option value="Pistas de Baile LED">Pistas de Baile LED</option>
+                                        <option value="Tarimas, Pasarelas y Carpas">Tarimas, Pasarelas y Carpas</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="client_message">Detalles del Evento</label>
+                                <textarea id="client_message" name="client_message" class="form-control" rows="4" placeholder="Indícanos la fecha estimada, la ciudad y qué te gustaría incluir..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-gold" style="width: 100%; font-size: 1.05rem;">
+                                <i class="fa-solid fa-paper-plane"></i> Enviar Cotización Ahora
+                            </button>
+
+                            <div id="form-status-msg" class="form-status-msg"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Final CTA Banner -->
+    <section class="final-cta-section section-padding">
+        <div class="container">
+            <div class="final-cta-box">
+                <span class="section-badge gold">⚡ Asesoría Inmediata</span>
+                <h2 class="final-cta-title">¿Listo para tu <span class="highlight-gold">evento perfecto?</span></h2>
+                <p class="final-cta-desc">Contáctanos hoy y recibe una asesoría personalizada sin costo con nuestros directores de producción.</p>
+                <div style="display: flex; justify-content: center; gap: 18px; flex-wrap: wrap;">
+                    <a href="https://wa.link/p2g3qg" target="_blank" rel="noopener" class="btn btn-gold">
+                        <i class="fa-brands fa-whatsapp"></i> Hablar por WhatsApp
+                    </a>
+                    <a href="javascript:switchView('contacto')" class="btn btn-outline">
+                        <i class="fa-solid fa-file-pen"></i> Solicitar Cotización
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-col-about">
+                    <a href="javascript:switchView('home')" class="site-logo-link" style="margin-bottom: 18px; display: inline-flex;">
+                        <img src="./assets/images/logo.png" alt="Latin Party Eventos" class="footer-logo-img" style="border-radius: 6px;">
+                    </a>
+                    <p class="footer-about-text">
+                        En Latin Party Eventos nos especializamos en diseñar experiencias memorables que combinan profesionalismo, creatividad y excelencia en cada detalle.
+                    </p>
+                    <div class="footer-social-links">
+                        <a href="https://www.facebook.com/share/17BwWKdEBR/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/latinparty?igsh=cWtsYWliY2pod2p5" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.link/p2g3qg" target="_blank" rel="noopener" class="footer-social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-col-title">Navegación</h3>
+                    <ul class="footer-menu">
+                        <li><a href="javascript:switchView('home')"><i class="fa-solid fa-chevron-right" style="font-size: 0.75rem;"></i> Inicio</a></li>
+                        <li><a href="javascript:switchView('servicios')"><i class="fa-solid fa-chevron-right" style="font-size: 0.75rem;"></i> Servicios</a></li>
+                        <li><a href="javascript:switchView('nosotros')"><i class="fa-solid fa-chevron-right" style="font-size: 0.75rem;"></i> Nosotros</a></li>
+                        <li><a href="javascript:switchView('contacto')"><i class="fa-solid fa-chevron-right" style="font-size: 0.75rem;"></i> Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-col-title">Especialidades</h3>
+                    <ul class="footer-menu">
+                        <li><a href="javascript:switchView('servicios')">Sonido Profesional & Line Array</a></li>
+                        <li><a href="javascript:switchView('servicios')">Iluminación DMX & Cabezas Móviles</a></li>
+                        <li><a href="javascript:switchView('servicios')">Pistas de Baile LED</a></li>
+                        <li><a href="javascript:switchView('servicios')">Escenarios, Tarimas y Carpas</a></li>
+                        <li><a href="javascript:switchView('servicios')">Bodas, 15 Años & Corporativos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-col-title">Contacto Directo</h3>
+                    <ul class="footer-contact-list">
+                        <li><i class="fa-solid fa-phone"></i> <span><a href="tel:+573118487785">+57 311 8487785</a></span></li>
+                        <li><i class="fa-solid fa-envelope"></i> <span><a href="mailto:contacto@latinpartyeventos.com">contacto@latinpartyeventos.com</a></span></li>
+                        <li><i class="fa-solid fa-headset"></i> <span>PQR: <a href="mailto:pqr@latinpartyeventos.com">pqr@latinpartyeventos.com</a></span></li>
+                        <li><i class="fa-solid fa-location-dot"></i> <span>Bogotá, Colombia (Cobertura Nacional)</span></li>
+                        <li><i class="fa-solid fa-clock"></i> <span>Lun - Sáb: 8:00 AM - 7:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    &copy; 2026 Latin Party Eventos. Todos los derechos reservados.
+                </div>
+                <div>
+                    Diseñado para <strong>Latin Party Eventos</strong> | Creado por <em>Agencia de marketing Tu impulso Web</em>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.link/p2g3qg" target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" aria-label="Chatear por WhatsApp">
+        <span class="whatsapp-pulse"></span>
+        <span class="whatsapp-icon-circle"><i class="fa-brands fa-whatsapp"></i></span>
+        <span class="whatsapp-text">¡Escríbenos en línea!</span>
+    </a>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" role="dialog" aria-modal="true">
+        <div class="lightbox-content">
+            <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+            <button class="lightbox-prev" aria-label="Anterior">&#10094;</button>
+            <img src="" alt="Latin Party Eventos" class="lightbox-img">
+            <button class="lightbox-next" aria-label="Siguiente">&#10095;</button>
+            <div class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- Theme Scripts -->
+    <script src="./assets/js/main.js"></script>
+
+    <!-- Interactive View Switcher Script -->
+    <script>
+        function switchView(viewName) {
+            document.querySelectorAll('.page-view').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.view-btn').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
+
+            const target = document.getElementById('view-' + viewName);
+            if (target) {
+                target.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            document.querySelectorAll('.view-btn').forEach(btn => {
+                if (btn.getAttribute('onclick').includes(viewName)) btn.classList.add('active');
+            });
+
+            const activeNav = document.querySelector('.nav-' + viewName);
+            if (activeNav) activeNav.classList.add('active');
+        }
+    </script>
+</body>
+</html>

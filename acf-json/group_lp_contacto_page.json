@@ -1,0 +1,32 @@
+{
+    "key": "group_lp_contacto_page",
+    "title": "Personalización - Página de Contacto",
+    "fields": [
+        {
+            "key": "field_lp_contact_hero_title",
+            "label": "Título Cabecera de Contacto",
+            "name": "lp_contact_hero_title",
+            "type": "text",
+            "default_value": "Tu Celebración, Nuestro Legado"
+        },
+        {
+            "key": "field_lp_contact_hero_desc",
+            "label": "Descripción Cabecera de Contacto",
+            "name": "lp_contact_hero_desc",
+            "type": "textarea",
+            "rows": 3,
+            "default_value": "¿Planeando un evento inolvidable? Nuestro equipo está listo para asesorarte y crear la mejor experiencia para ti y tus invitados. Déjanos tus datos y recibe una cotización gratuita en minutos."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-contacto.php"
+            }
+        ]
+    ],
+    "menu_order": 4,
+    "active": true
+}

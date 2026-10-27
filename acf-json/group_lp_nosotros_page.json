@@ -1,0 +1,47 @@
+{
+    "key": "group_lp_nosotros_page",
+    "title": "Personalización - Página Nosotros",
+    "fields": [
+        {
+            "key": "field_lp_mision_title",
+            "label": "Título de Misión",
+            "name": "lp_mision_title",
+            "type": "text",
+            "default_value": "Nuestra Misión"
+        },
+        {
+            "key": "field_lp_mision_text",
+            "label": "Texto de Misión",
+            "name": "lp_mision_text",
+            "type": "textarea",
+            "rows": 4,
+            "default_value": "Ofrecer alternativas efectivas, eficaces y eficientes, en la creación, diseño, organización y ejecución de eventos sociales y empresariales. Crear un ambiente óptimo con calidad, seriedad y cumplimiento, garantizando una ocasión inolvidable."
+        },
+        {
+            "key": "field_lp_vision_title",
+            "label": "Título de Visión",
+            "name": "lp_vision_title",
+            "type": "text",
+            "default_value": "Nuestra Visión"
+        },
+        {
+            "key": "field_lp_vision_text",
+            "label": "Texto de Visión",
+            "name": "lp_vision_text",
+            "type": "textarea",
+            "rows": 4,
+            "default_value": "Queremos que LATIN PARTY EVENTOS sea una empresa líder en organización y producción de eventos sociales y corporativos, con presencia y reconocimiento a nivel nacional, basada en el profesionalismo y la calidad humana de nuestro personal."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-nosotros.php"
+            }
+        ]
+    ],
+    "menu_order": 3,
+    "active": true
+}

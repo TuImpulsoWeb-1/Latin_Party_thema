@@ -1,0 +1,32 @@
+{
+    "key": "group_lp_servicios_page",
+    "title": "Personalización - Página de Servicios",
+    "fields": [
+        {
+            "key": "field_lp_serv_page_title",
+            "label": "Título de la Página",
+            "name": "lp_serv_page_title",
+            "type": "text",
+            "default_value": "Todo lo que necesitas para tu evento en un solo lugar"
+        },
+        {
+            "key": "field_lp_serv_page_desc",
+            "label": "Descripción de la Página",
+            "name": "lp_serv_page_desc",
+            "type": "textarea",
+            "rows": 3,
+            "default_value": "En Latin Party Eventos ofrecemos soluciones completas para cada tipo de celebración. Desde el sonido profesional, la iluminación y la ambientación, hasta la producción integral de conciertos, bodas y eventos corporativos."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-servicios.php"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "active": true
+}

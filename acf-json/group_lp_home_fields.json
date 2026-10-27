@@ -1,0 +1,237 @@
+{
+    "key": "group_lp_home_fields",
+    "title": "Personalización - Página de Inicio",
+    "fields": [
+        {
+            "key": "tab_lp_hero",
+            "label": "Hero Principal",
+            "type": "tab"
+        },
+        {
+            "key": "field_lp_hero_badge",
+            "label": "Badge Superior",
+            "name": "lp_hero_badge",
+            "type": "text",
+            "default_value": "⭐ Producción Integral de Eventos"
+        },
+        {
+            "key": "field_lp_hero_title",
+            "label": "Título Principal",
+            "name": "lp_hero_title",
+            "type": "text",
+            "default_value": "Vive la fiesta, nosotros la creamos"
+        },
+        {
+            "key": "field_lp_hero_highlight",
+            "label": "Subtítulo Destacado (Dorado)",
+            "name": "lp_hero_highlight",
+            "type": "text",
+            "default_value": "Eventos que combinan confianza, estilo y diversión"
+        },
+        {
+            "key": "field_lp_hero_description",
+            "label": "Descripción del Hero",
+            "name": "lp_hero_description",
+            "type": "textarea",
+            "rows": 3,
+            "default_value": "En Latin Party Eventos convertimos tus ideas en experiencias únicas. Desde bodas y 15 años hasta eventos corporativos y conciertos, nuestro equipo se encarga de cada detalle."
+        },
+        {
+            "key": "field_lp_hero_btn1_text",
+            "label": "Botón 1 Texto",
+            "name": "lp_hero_btn1_text",
+            "type": "text",
+            "default_value": "Empieza tu evento hoy"
+        },
+        {
+            "key": "field_lp_hero_btn1_url",
+            "label": "Botón 1 Enlace",
+            "name": "lp_hero_btn1_url",
+            "type": "text",
+            "default_value": "#contacto"
+        },
+        {
+            "key": "field_lp_hero_btn2_text",
+            "label": "Botón 2 Texto",
+            "name": "lp_hero_btn2_text",
+            "type": "text",
+            "default_value": "Hablar por WhatsApp"
+        },
+        {
+            "key": "field_lp_hero_btn2_url",
+            "label": "Botón 2 Enlace",
+            "name": "lp_hero_btn2_url",
+            "type": "text",
+            "default_value": "https://wa.link/p2g3qg"
+        },
+        {
+            "key": "field_lp_hero_img1",
+            "label": "Imagen Hero 1 (Fondo)",
+            "name": "lp_hero_img1",
+            "type": "image",
+            "return_format": "array"
+        },
+        {
+            "key": "field_lp_hero_img2",
+            "label": "Imagen Hero 2 (Fondo)",
+            "name": "lp_hero_img2",
+            "type": "image",
+            "return_format": "array"
+        },
+        {
+            "key": "tab_lp_stats",
+            "label": "Métricas / Estadísticas",
+            "type": "tab"
+        },
+        {
+            "key": "field_lp_stat1_num",
+            "label": "Métrica 1 Número",
+            "name": "lp_stat1_num",
+            "type": "text",
+            "default_value": "+15"
+        },
+        {
+            "key": "field_lp_stat1_lbl",
+            "label": "Métrica 1 Etiqueta",
+            "name": "lp_stat1_lbl",
+            "type": "text",
+            "default_value": "Años de Experiencia"
+        },
+        {
+            "key": "field_lp_stat2_num",
+            "label": "Métrica 2 Número",
+            "name": "lp_stat2_num",
+            "type": "text",
+            "default_value": "+1,200"
+        },
+        {
+            "key": "field_lp_stat2_lbl",
+            "label": "Métrica 2 Etiqueta",
+            "name": "lp_stat2_lbl",
+            "type": "text",
+            "default_value": "Eventos Exitosos"
+        },
+        {
+            "key": "field_lp_stat3_num",
+            "label": "Métrica 3 Número",
+            "name": "lp_stat3_num",
+            "type": "text",
+            "default_value": "100%"
+        },
+        {
+            "key": "field_lp_stat3_lbl",
+            "label": "Métrica 3 Etiqueta",
+            "name": "lp_stat3_lbl",
+            "type": "text",
+            "default_value": "Satisfacción Garantizada"
+        },
+        {
+            "key": "field_lp_stat4_num",
+            "label": "Métrica 4 Número",
+            "name": "lp_stat4_num",
+            "type": "text",
+            "default_value": "PRO"
+        },
+        {
+            "key": "field_lp_stat4_lbl",
+            "label": "Métrica 4 Etiqueta",
+            "name": "lp_stat4_lbl",
+            "type": "text",
+            "default_value": "Equipos Propios DMX & LED"
+        },
+        {
+            "key": "tab_lp_advisory",
+            "label": "Banner Asesoría",
+            "type": "tab"
+        },
+        {
+            "key": "field_lp_adv_title",
+            "label": "Título de Asesoría",
+            "name": "lp_adv_title",
+            "type": "text",
+            "default_value": "Asesoría Personalizada Sin Costo"
+        },
+        {
+            "key": "field_lp_adv_desc",
+            "label": "Descripción de Asesoría",
+            "name": "lp_adv_desc",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Convierte tu idea en un evento inolvidable. Agenda una sesión gratuita con nuestros expertos y descubre cómo darle vida a tu celebración, sin compromiso."
+        },
+        {
+            "key": "field_lp_adv_btn_text",
+            "label": "Texto Botón Asesoría",
+            "name": "lp_adv_btn_text",
+            "type": "text",
+            "default_value": "Agendar Asesoría Gratuita"
+        },
+        {
+            "key": "tab_lp_testimonials",
+            "label": "Testimonios",
+            "type": "tab"
+        },
+        {
+            "key": "field_lp_testi1_name",
+            "label": "Testimonio 1 - Nombre",
+            "name": "lp_testi1_name",
+            "type": "text",
+            "default_value": "Laura Torres"
+        },
+        {
+            "key": "field_lp_testi1_city",
+            "label": "Testimonio 1 - Ciudad",
+            "name": "lp_testi1_city",
+            "type": "text",
+            "default_value": "Bogotá"
+        },
+        {
+            "key": "field_lp_testi1_text",
+            "label": "Testimonio 1 - Comentario",
+            "name": "lp_testi1_text",
+            "type": "textarea",
+            "rows": 3,
+            "default_value": "Contratamos a LatinPartyEventos para la celebración de los 15 años de mi hija y fue una experiencia inolvidable. Desde la decoración hasta la música, todo estuvo perfectamente coordinado. La atención fue muy profesional y nuestros invitados quedaron encantados."
+        },
+        {
+            "key": "field_lp_testi2_name",
+            "label": "Testimonio 2 - Nombre",
+            "name": "lp_testi2_name",
+            "type": "text",
+            "default_value": "Carolina Ramírez"
+        },
+        {
+            "key": "field_lp_testi2_city",
+            "label": "Testimonio 2 - Ciudad",
+            "name": "lp_testi2_city",
+            "type": "text",
+            "default_value": "Ibagué"
+        },
+        {
+            "key": "field_lp_testi2_text",
+            "label": "Testimonio 2 - Comentario",
+            "name": "lp_testi2_text",
+            "type": "textarea",
+            "rows": 3,
+            "default_value": "Confiamos en LatinPartyEventos para la fiesta de fin de año de la empresa y superaron todas nuestras expectativas. La organización, la ambientación y la energía que lograron fue espectacular."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "front-page.php"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "active": true
+}

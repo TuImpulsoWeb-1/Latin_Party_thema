@@ -1,0 +1,6 @@
+# Exclude theme zip packages and OS files
+latin-party-theme.zip
+*.zip
+.DS_Store
+Thumbs.db
+*.log

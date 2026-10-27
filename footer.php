@@ -23,20 +23,42 @@ $nosotros_url  = lp_get_page_url('nosotros');
 $contacto_url  = lp_get_page_url('contacto', '#contacto');
 ?>
 
+<?php
+$cta_badge     = lp_get_setting('lp_cta_badge', '⚡ Asesoría Inmediata');
+$cta_title     = lp_get_setting('lp_cta_title', '¿Listo para tu evento perfecto?');
+$cta_desc      = lp_get_setting('lp_cta_desc', 'Contáctanos hoy y recibe una asesoría personalizada sin costo con nuestros directores de producción.');
+$cta_btn1_show = lp_get_setting('lp_cta_btn1_show', true);
+$cta_btn1_text = lp_get_setting('lp_cta_btn1_text', 'Hablar por WhatsApp');
+$cta_btn1_url  = lp_get_setting('lp_cta_btn1_url', '');
+if (empty($cta_btn1_url)) {
+    $cta_btn1_url = lp_whatsapp_url('¡Hola! Quiero cotizar mi evento con Latin Party Eventos.');
+}
+$cta_btn2_show = lp_get_setting('lp_cta_btn2_show', true);
+$cta_btn2_text = lp_get_setting('lp_cta_btn2_text', 'Solicitar Cotización');
+$cta_btn2_url  = lp_get_setting('lp_cta_btn2_url', '');
+if (empty($cta_btn2_url)) {
+    $cta_btn2_url = $contacto_url;
+}
+?>
+
 <!-- Pre-Footer Final CTA -->
 <section class="final-cta-section section-padding">
     <div class="container">
         <div class="final-cta-box">
-            <span class="section-badge gold">⚡ Asesoría Inmediata</span>
-            <h2 class="final-cta-title">¿Listo para tu <span class="highlight-gold">evento perfecto?</span></h2>
-            <p class="final-cta-desc">Contáctanos hoy y recibe una asesoría personalizada sin costo con nuestros directores de producción.</p>
+            <span class="section-badge gold"><?php echo esc_html($cta_badge); ?></span>
+            <h2 class="final-cta-title"><?php echo esc_html($cta_title); ?></h2>
+            <p class="final-cta-desc"><?php echo esc_html($cta_desc); ?></p>
             <div style="display: flex; justify-content: center; gap: 18px; flex-wrap: wrap;">
-                <a href="<?php echo esc_url(lp_whatsapp_url('¡Hola! Quiero cotizar mi evento con Latin Party Eventos.')); ?>" target="_blank" rel="noopener" class="btn btn-gold">
-                    <i class="fa-brands fa-whatsapp"></i> Hablar por WhatsApp
-                </a>
-                <a href="<?php echo esc_url($contacto_url); ?>" class="btn btn-outline">
-                    <i class="fa-solid fa-file-pen"></i> Solicitar Cotización
-                </a>
+                <?php if ($cta_btn1_show) : ?>
+                    <a href="<?php echo esc_url($cta_btn1_url); ?>" target="_blank" rel="noopener" class="btn btn-gold">
+                        <i class="fa-brands fa-whatsapp"></i> <?php echo esc_html($cta_btn1_text); ?>
+                    </a>
+                <?php endif; ?>
+                <?php if ($cta_btn2_show) : ?>
+                    <a href="<?php echo esc_url($cta_btn2_url); ?>" class="btn btn-outline">
+                        <i class="fa-solid fa-file-pen"></i> <?php echo esc_html($cta_btn2_text); ?>
+                    </a>
+                <?php endif; ?>
             </div>
         </div>
     </div>

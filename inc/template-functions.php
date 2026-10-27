@@ -11,20 +11,34 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Unified Setting Getter: Checks Customizer first, then ACF Options, then Default.
+/**
+ * Unified Getter: Prioritizes ACF Page Field > Customizer > ACF Theme Options > Default Fallback.
+ * This ensures that EVERY text, image, link and button edited in ACF immediately updates the live site.
  */
-function lp_get_setting($key, $default = '') {
-    // 1. Check Customizer (Apariencia > Personalizar)
+function lp_get_value($key, $default = '', $post_id = false) {
+    if (!$post_id) {
+        $post_id = get_the_ID();
+    }
+
+    // 1. Check ACF Field on current page/post
+    if ($post_id && function_exists('get_field')) {
+        $val = get_field($key, $post_id);
+        if ($val !== null && $val !== false && $val !== '') {
+            return $val;
+        }
+    }
+
+    // 2. Check WordPress Customizer
     $customizer_val = get_theme_mod($key);
     if ($customizer_val !== null && $customizer_val !== false && $customizer_val !== '') {
         return $customizer_val;
     }
 
-    // 2. Check ACF Options Page
+    // 3. Check ACF Options Page
     if (function_exists('get_field')) {
-        $acf_val = get_field($key, 'option');
-        if (!empty($acf_val)) {
-            return $acf_val;
+        $acf_opt = get_field($key, 'option');
+        if ($acf_opt !== null && $acf_opt !== false && $acf_opt !== '') {
+            return $acf_opt;
         }
     }
 
@@ -32,26 +46,24 @@ function lp_get_setting($key, $default = '') {
 }
 
 /**
- * Backward compatibility alias for lp_get_option
+ * Unified alias for lp_get_setting
+ */
+function lp_get_setting($key, $default = '', $post_id = false) {
+    return lp_get_value($key, $default, $post_id);
+}
+
+/**
+ * Unified alias for lp_get_option
  */
 function lp_get_option($key, $default = '') {
-    return lp_get_setting($key, $default);
+    return lp_get_value($key, $default);
 }
 
 /**
- * Get ACF Field with fallback
+ * Unified alias for lp_get_field
  */
 function lp_get_field($key, $post_id = false, $default = '') {
-    if (!$post_id) {
-        $post_id = get_the_ID();
-    }
-    if (function_exists('get_field')) {
-        $val = get_field($key, $post_id);
-        if (!empty($val)) {
-            return $val;
-        }
-    }
-    return $default;
+    return lp_get_value($key, $default, $post_id);
 }
 
 /**

@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('LATIN_PARTY_VERSION', '1.2.0');
+define('LATIN_PARTY_VERSION', '1.3.0');
 define('LATIN_PARTY_DIR', get_template_directory());
 define('LATIN_PARTY_URI', get_template_directory_uri());
 
@@ -124,6 +124,39 @@ if (function_exists('acf_add_options_page')) {
         'icon_url'      => 'dashicons-star-filled',
         'position'      => 2,
     ));
+
+    if (function_exists('acf_add_options_sub_page')) {
+        acf_add_options_sub_page(array(
+            'page_title'  => 'Ajustes Generales',
+            'menu_title'  => 'Ajustes Generales',
+            'parent_slug' => 'latin-party-settings',
+            'menu_slug'   => 'latin-party-settings',
+        ));
+        acf_add_options_sub_page(array(
+            'page_title'  => 'Página de Inicio (Home)',
+            'menu_title'  => 'Página de Inicio',
+            'parent_slug' => 'latin-party-settings',
+            'menu_slug'   => 'latin-party-inicio',
+        ));
+        acf_add_options_sub_page(array(
+            'page_title'  => 'Página de Servicios',
+            'menu_title'  => 'Página de Servicios',
+            'parent_slug' => 'latin-party-settings',
+            'menu_slug'   => 'latin-party-servicios',
+        ));
+        acf_add_options_sub_page(array(
+            'page_title'  => 'Página de Nosotros',
+            'menu_title'  => 'Página de Nosotros',
+            'parent_slug' => 'latin-party-settings',
+            'menu_slug'   => 'latin-party-nosotros',
+        ));
+        acf_add_options_sub_page(array(
+            'page_title'  => 'Página de Contacto',
+            'menu_title'  => 'Página de Contacto',
+            'parent_slug' => 'latin-party-settings',
+            'menu_slug'   => 'latin-party-contacto',
+        ));
+    }
 }
 
 /**

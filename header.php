@@ -11,6 +11,7 @@ $email         = lp_get_setting('lp_contact_email', 'contacto@latinpartyeventos.
 $location      = lp_get_setting('lp_location', 'Bogotá, Colombia');
 $fb            = lp_get_setting('lp_facebook', 'https://www.facebook.com/share/17BwWKdEBR/');
 $ig            = lp_get_setting('lp_instagram', 'https://www.instagram.com/latinparty?igsh=cWtsYWliY2pod2p5');
+$btn_show      = lp_get_setting('lp_header_btn_show', true);
 $btn_text      = lp_get_setting('lp_header_btn_text', 'Cotizar');
 $btn_action    = lp_get_setting('lp_header_btn_action', 'whatsapp');
 
@@ -90,6 +91,7 @@ $btn_url = ($btn_action === 'contacto')
                 <?php lp_render_primary_menu(); ?>
 
                 <!-- CTA Button -->
+                <?php if ($btn_show) : ?>
                 <div class="header-cta">
                     <a href="<?php echo esc_url($btn_url); ?>" <?php echo ($btn_action === 'whatsapp') ? 'target="_blank" rel="noopener"' : ''; ?> class="btn btn-teal btn-sm">
                         <?php if ($btn_action === 'whatsapp') : ?>
@@ -100,6 +102,7 @@ $btn_url = ($btn_action === 'contacto')
                         <?php echo esc_html($btn_text); ?>
                     </a>
                 </div>
+                <?php endif; ?>
             </nav>
 
             <!-- Mobile Hamburger Button -->

@@ -34,43 +34,50 @@ $ig    = lp_get_option('lp_instagram', 'https://www.instagram.com/latinparty?igs
         <div class="container">
 
             <!-- Contact Information Cards -->
+            <?php
+            $c_phone_val = lp_get_setting('lp_c_phone_val', $phone);
+            $c_wa_btn    = lp_get_setting('lp_c_wa_btn', 'Chatear Ahora');
+            $c_wa_url    = lp_get_setting('lp_c_wa_url', '');
+            $c_wa_link   = !empty($c_wa_url) ? esc_url($c_wa_url) : lp_whatsapp_url('¡Hola Latin Party Eventos! Deseo solicitar asesoría.');
+            $c_mail_val  = lp_get_setting('lp_c_mail_val', $email);
+            ?>
             <div class="contact-info-grid">
                 <!-- Teléfono -->
                 <div class="contact-info-card">
                     <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
-                    <h3 style="font-size: 1.15rem; margin-bottom: 6px;">Línea Telefónica</h3>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px;">Atención de lunes a sábado</p>
-                    <a href="tel:<?php echo esc_attr(preg_replace('/[^0-9\+]/', '', $phone)); ?>" style="color: var(--gold-light); font-weight: 700;">
-                        <?php echo esc_html($phone); ?>
+                    <h3 style="font-size: 1.15rem; margin-bottom: 6px;"><?php echo esc_html(lp_get_setting('lp_c_phone_title', 'Línea Telefónica')); ?></h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px;"><?php echo esc_html(lp_get_setting('lp_c_phone_sub', 'Atención de lunes a sábado')); ?></p>
+                    <a href="tel:<?php echo esc_attr(preg_replace('/[^0-9\+]/', '', $c_phone_val)); ?>" style="color: var(--gold-light); font-weight: 700;">
+                        <?php echo esc_html($c_phone_val); ?>
                     </a>
                 </div>
 
                 <!-- WhatsApp -->
                 <div class="contact-info-card" style="border-color: var(--border-accent);">
                     <div class="contact-icon-box" style="background: rgba(37, 211, 102, 0.15); color: #25d366;"><i class="fa-brands fa-whatsapp"></i></div>
-                    <h3 style="font-size: 1.15rem; margin-bottom: 6px;">WhatsApp Oficial</h3>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px;">Respuesta rápida</p>
-                    <a href="<?php echo esc_url(lp_whatsapp_url('¡Hola Latin Party Eventos! Deseo solicitar asesoría.')); ?>" target="_blank" rel="noopener" class="btn btn-teal btn-sm">
-                        Chatear Ahora
+                    <h3 style="font-size: 1.15rem; margin-bottom: 6px;"><?php echo esc_html(lp_get_setting('lp_c_wa_title', 'WhatsApp Oficial')); ?></h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px;"><?php echo esc_html(lp_get_setting('lp_c_wa_sub', 'Respuesta rápida')); ?></p>
+                    <a href="<?php echo esc_url($c_wa_link); ?>" target="_blank" rel="noopener" class="btn btn-teal btn-sm">
+                        <?php echo esc_html($c_wa_btn); ?>
                     </a>
                 </div>
 
                 <!-- Email -->
                 <div class="contact-info-card">
                     <div class="contact-icon-box"><i class="fa-solid fa-envelope"></i></div>
-                    <h3 style="font-size: 1.15rem; margin-bottom: 6px;">Correo de Contacto</h3>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px;">Propuestas y cotizaciones</p>
-                    <a href="mailto:<?php echo esc_attr($email); ?>" style="color: var(--teal-primary); font-size: 0.88rem; word-break: break-all;">
-                        <?php echo esc_html($email); ?>
+                    <h3 style="font-size: 1.15rem; margin-bottom: 6px;"><?php echo esc_html(lp_get_setting('lp_c_mail_title', 'Correo de Contacto')); ?></h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px;"><?php echo esc_html(lp_get_setting('lp_c_mail_sub', 'Propuestas y cotizaciones')); ?></p>
+                    <a href="mailto:<?php echo esc_attr($c_mail_val); ?>" style="color: var(--teal-primary); font-size: 0.88rem; word-break: break-all;">
+                        <?php echo esc_html($c_mail_val); ?>
                     </a>
                 </div>
 
                 <!-- Ubicación -->
                 <div class="contact-info-card">
                     <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
-                    <h3 style="font-size: 1.15rem; margin-bottom: 6px;">Sede &amp; Cobertura</h3>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 6px;"><?php echo esc_html($loc); ?></p>
-                    <span style="font-size: 0.82rem; color: var(--gold-light);">Servicio a Nivel Nacional</span>
+                    <h3 style="font-size: 1.15rem; margin-bottom: 6px;"><?php echo esc_html(lp_get_setting('lp_c_loc_title', 'Sede & Cobertura')); ?></h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 6px;"><?php echo esc_html(lp_get_setting('lp_c_loc_sub', $loc)); ?></p>
+                    <span style="font-size: 0.82rem; color: var(--gold-light);"><?php echo esc_html(lp_get_setting('lp_c_loc_badge', 'Servicio a Nivel Nacional')); ?></span>
                 </div>
             </div>
 
@@ -132,16 +139,21 @@ $ig    = lp_get_option('lp_instagram', 'https://www.instagram.com/latinparty?igs
                     </form>
 
                     <!-- Redes Sociales Banner -->
+                    <?php
+                    $c_social_txt = lp_get_setting('lp_contact_social_text', 'Síguenos en redes como @Latinpartyeventos');
+                    $c_fb_link    = lp_get_setting('lp_contact_fb_url', '') ?: $fb;
+                    $c_ig_link    = lp_get_setting('lp_contact_ig_url', '') ?: $ig;
+                    ?>
                     <div class="contact-social-wrap">
-                        <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 12px;">Síguenos en redes como <strong>@Latinpartyeventos</strong></p>
+                        <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 12px;"><?php echo esc_html($c_social_txt); ?></p>
                         <div class="contact-social-buttons">
-                            <?php if (!empty($fb)) : ?>
-                                <a href="<?php echo esc_url($fb); ?>" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                            <?php if (!empty($c_fb_link)) : ?>
+                                <a href="<?php echo esc_url($c_fb_link); ?>" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
                                     <i class="fa-brands fa-facebook-f"></i> Facebook
                                 </a>
                             <?php endif; ?>
-                            <?php if (!empty($ig)) : ?>
-                                <a href="<?php echo esc_url($ig); ?>" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                            <?php if (!empty($c_ig_link)) : ?>
+                                <a href="<?php echo esc_url($c_ig_link); ?>" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
                                     <i class="fa-brands fa-instagram"></i> Instagram
                                 </a>
                             <?php endif; ?>

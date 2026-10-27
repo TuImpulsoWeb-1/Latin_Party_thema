@@ -3,11 +3,16 @@
     "title": "Ajustes Generales - Latin Party Eventos",
     "fields": [
         {
+            "key": "tab_opt_brand",
+            "label": "Identidad y Marca",
+            "type": "tab"
+        },
+        {
             "key": "field_lp_site_logo",
-            "label": "Logo de la Empresa",
+            "label": "Logo Oficial de la Empresa",
             "name": "lp_site_logo",
             "type": "image",
-            "instructions": "Sube el logo oficial (PNG transparente o JPG).",
+            "instructions": "Sube el logo oficial (PNG transparente recomendado).",
             "return_format": "array",
             "preview_size": "medium"
         },
@@ -20,11 +25,11 @@
         },
         {
             "key": "field_lp_whatsapp_number",
-            "label": "Número de WhatsApp (con código de país)",
+            "label": "Número WhatsApp (código de país sin espacios ni símbolos)",
             "name": "lp_whatsapp_number",
             "type": "text",
             "default_value": "573118487785",
-            "instructions": "Ej: 573118487785 (sin espacios ni símbolos)"
+            "instructions": "Ejemplo: 573118487785"
         },
         {
             "key": "field_lp_whatsapp_link",
@@ -34,8 +39,16 @@
             "default_value": "https://wa.link/p2g3qg"
         },
         {
+            "key": "field_lp_whatsapp_default_message",
+            "label": "Mensaje Predeterminado de WhatsApp",
+            "name": "lp_whatsapp_default_message",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "¡Hola Latin Party Eventos! Deseo solicitar asesoría para mi evento."
+        },
+        {
             "key": "field_lp_contact_email",
-            "label": "Correo de Contacto",
+            "label": "Correo de Contacto / Cotizaciones",
             "name": "lp_contact_email",
             "type": "email",
             "default_value": "contacto@latinpartyeventos.com"
@@ -49,10 +62,15 @@
         },
         {
             "key": "field_lp_location",
-            "label": "Ubicación / Ciudad",
+            "label": "Ubicación / Ciudad Sede",
             "name": "lp_location",
             "type": "text",
             "default_value": "Bogotá, Colombia"
+        },
+        {
+            "key": "tab_opt_social",
+            "label": "Redes Sociales",
+            "type": "tab"
         },
         {
             "key": "field_lp_facebook",
@@ -69,8 +87,61 @@
             "default_value": "https://www.instagram.com/latinparty?igsh=cWtsYWliY2pod2p5"
         },
         {
+            "key": "field_lp_tiktok",
+            "label": "Enlace de TikTok (Opcional)",
+            "name": "lp_tiktok",
+            "type": "url",
+            "default_value": ""
+        },
+        {
+            "key": "field_lp_youtube",
+            "label": "Enlace de YouTube (Opcional)",
+            "name": "lp_youtube",
+            "type": "url",
+            "default_value": ""
+        },
+        {
+            "key": "tab_opt_header_footer",
+            "label": "Cabecera y Pie de Página",
+            "type": "tab"
+        },
+        {
+            "key": "field_lp_show_topbar",
+            "label": "Mostrar Barra Superior (Topbar)",
+            "name": "lp_show_topbar",
+            "type": "true_false",
+            "ui": 1,
+            "default_value": 1
+        },
+        {
+            "key": "field_lp_header_btn_show",
+            "label": "Mostrar Botón en Cabecera",
+            "name": "lp_header_btn_show",
+            "type": "true_false",
+            "ui": 1,
+            "default_value": 1
+        },
+        {
+            "key": "field_lp_header_btn_text",
+            "label": "Texto del Botón de Cabecera",
+            "name": "lp_header_btn_text",
+            "type": "text",
+            "default_value": "Cotizar"
+        },
+        {
+            "key": "field_lp_header_btn_action",
+            "label": "Acción del Botón de Cabecera",
+            "name": "lp_header_btn_action",
+            "type": "select",
+            "choices": {
+                "whatsapp": "Abrir chat directo de WhatsApp",
+                "contacto": "Ir a la página de Contacto"
+            },
+            "default_value": "whatsapp"
+        },
+        {
             "key": "field_lp_footer_about",
-            "label": "Texto Descriptivo del Footer",
+            "label": "Descripción de la Empresa en el Footer",
             "name": "lp_footer_about",
             "type": "textarea",
             "rows": 3,
@@ -78,10 +149,18 @@
         },
         {
             "key": "field_lp_copyright",
-            "label": "Texto de Copyright",
+            "label": "Texto de Copyright en el Footer",
             "name": "lp_copyright",
             "type": "text",
             "default_value": "Latin Party Eventos. Todos los derechos reservados."
+        },
+        {
+            "key": "field_lp_show_whatsapp_float",
+            "label": "Mostrar Botón Flotante de WhatsApp",
+            "name": "lp_show_whatsapp_float",
+            "type": "true_false",
+            "ui": 1,
+            "default_value": 1
         }
     ],
     "location": [
@@ -96,7 +175,5 @@
     "menu_order": 0,
     "position": "normal",
     "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
     "active": true
 }

@@ -53,26 +53,26 @@ $cta_btn   = lp_get_setting('lp_serv_cta_btn', 'Hablar con un Asesor');
 
                 <div class="service-spec-grid">
                     <div class="service-spec-card">
-                        <div class="spec-badge">Hasta 100 Personas</div>
-                        <h3 class="spec-title">Sonido Convencional</h3>
+                        <div class="spec-badge"><?php echo esc_html(lp_get_setting('lp_serv_a1_badge', 'Hasta 100 Personas')); ?></div>
+                        <h3 class="spec-title"><?php echo esc_html(lp_get_setting('lp_serv_a1_title', 'Sonido Convencional')); ?></h3>
                         <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
-                            Ideal para eventos íntimos, matrimonios civiles, 15 años y salones medianos. Altavoces de alta fidelidad, micrófonos inalámbricos UHF y consolas de mezcla limpias.
+                            <?php echo esc_html(lp_get_setting('lp_serv_a1_desc', 'Ideal para eventos íntimos, matrimonios civiles, 15 años y salones medianos. Altavoces de alta fidelidad, micrófonos inalámbricos UHF y consolas de mezcla limpias.')); ?>
                         </p>
                     </div>
 
                     <div class="service-spec-card" style="border-color: var(--border-accent);">
-                        <div class="spec-badge" style="color: var(--teal-primary);">Gran Formato</div>
-                        <h3 class="spec-title">Sonido Line Array</h3>
+                        <div class="spec-badge" style="color: var(--teal-primary);"><?php echo esc_html(lp_get_setting('lp_serv_a2_badge', 'Gran Formato')); ?></div>
+                        <h3 class="spec-title"><?php echo esc_html(lp_get_setting('lp_serv_a2_title', 'Sonido Line Array')); ?></h3>
                         <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
-                            Para conciertos, festivales, asambleas y recintos masivos. Distribución de presión sonora uniforme en grandes distancias sin pérdida de agudos ni saturación de graves.
+                            <?php echo esc_html(lp_get_setting('lp_serv_a2_desc', 'Para conciertos, festivales, asambleas y recintos masivos. Distribución de presión sonora uniforme en grandes distancias sin pérdida de agudos ni saturación de graves.')); ?>
                         </p>
                     </div>
 
                     <div class="service-spec-card">
-                        <div class="spec-badge">Espectáculos Vivos</div>
-                        <h3 class="spec-title">Sonido Tipo Concierto</h3>
+                        <div class="spec-badge"><?php echo esc_html(lp_get_setting('lp_serv_a3_badge', 'Espectáculos Vivos')); ?></div>
+                        <h3 class="spec-title"><?php echo esc_html(lp_get_setting('lp_serv_a3_title', 'Sonido Tipo Concierto')); ?></h3>
                         <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
-                            Configuración completa para orquestas y bandas en vivo: microfonía instrumental Shure/Sennheiser, monitores de piso, consolas digitales multicanal y técnicos en vivo.
+                            <?php echo esc_html(lp_get_setting('lp_serv_a3_desc', 'Configuración completa para orquestas y bandas en vivo: microfonía instrumental Shure/Sennheiser, monitores de piso, consolas digitales multicanal y técnicos en vivo.')); ?>
                         </p>
                     </div>
                 </div>
@@ -88,26 +88,26 @@ $cta_btn   = lp_get_setting('lp_serv_cta_btn', 'Hablar con un Asesor');
 
                 <div class="service-spec-grid">
                     <div class="service-spec-card">
-                        <div class="spec-badge">Dinámicas 360°</div>
-                        <h3 class="spec-title">Cabezas Móviles Beam &amp; Spot</h3>
+                        <div class="spec-badge"><?php echo esc_html(lp_get_setting('lp_serv_l1_badge', 'Dinámicas 360°')); ?></div>
+                        <h3 class="spec-title"><?php echo esc_html(lp_get_setting('lp_serv_l1_title', 'Cabezas Móviles Beam & Spot')); ?></h3>
                         <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
-                            Efectos de prisma, gobos personalizados con el logo de tu empresa o las iniciales de los novios, y haces de luz potentes que llenan todo el salón.
+                            <?php echo esc_html(lp_get_setting('lp_serv_l1_desc', 'Efectos de prisma, gobos personalizados con el logo de tu empresa o las iniciales de los novios, y haces de luz potentes que llenan todo el salón.')); ?>
                         </p>
                     </div>
 
                     <div class="service-spec-card">
-                        <div class="spec-badge">Software Computarizado</div>
-                        <h3 class="spec-title">Control DMX en Tiempo Real</h3>
+                        <div class="spec-badge"><?php echo esc_html(lp_get_setting('lp_serv_l2_badge', 'Software Computarizado')); ?></div>
+                        <h3 class="spec-title"><?php echo esc_html(lp_get_setting('lp_serv_l2_title', 'Control DMX en Tiempo Real')); ?></h3>
                         <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
-                            Programación milimétrica por escenas. Cambios de color acordes a la temática de la decoración y sincronía total con la música.
+                            <?php echo esc_html(lp_get_setting('lp_serv_l2_desc', 'Programación milimétrica por escenas. Cambios de color acordes a la temática de la decoración y sincronía total con la música.')); ?>
                         </p>
                     </div>
 
                     <div class="service-spec-card">
-                        <div class="spec-badge">Ambientación Perimetral</div>
-                        <h3 class="spec-title">Par LED, Neón &amp; City Color</h3>
+                        <div class="spec-badge"><?php echo esc_html(lp_get_setting('lp_serv_l3_badge', 'Ambientación Perimetral')); ?></div>
+                        <h3 class="spec-title"><?php echo esc_html(lp_get_setting('lp_serv_l3_title', 'Par LED, Neón & City Color')); ?></h3>
                         <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
-                            Baño de luz a paredes, columnas y jardines para transformar salones comunes en espacios de alta sofisticación y glamour.
+                            <?php echo esc_html(lp_get_setting('lp_serv_l3_desc', 'Baño de luz a paredes, columnas y jardines para transformar salones comunes en espacios de alta sofisticación y glamour.')); ?>
                         </p>
                     </div>
                 </div>
@@ -123,43 +123,50 @@ $cta_btn   = lp_get_setting('lp_serv_cta_btn', 'Hablar con un Asesor');
 
                 <div class="service-spec-grid">
                     <div class="service-spec-card">
-                        <div class="spec-badge">Efecto WOW</div>
-                        <h3 class="spec-title">Pistas de Baile LED</h3>
+                        <div class="spec-badge"><?php echo esc_html(lp_get_setting('lp_serv_e1_badge', 'Efecto WOW')); ?></div>
+                        <h3 class="spec-title"><?php echo esc_html(lp_get_setting('lp_serv_e1_title', 'Pistas de Baile LED')); ?></h3>
                         <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
-                            Paneles modulares de alta resistencia con cristal templado. Gráficos de túnel infinito, estrellas, corazones, nombres y ecualizadores visuales.
+                            <?php echo esc_html(lp_get_setting('lp_serv_e1_desc', 'Paneles modulares de alta resistencia con cristal templado. Gráficos de túnel infinito, estrellas, corazones, nombres y ecualizadores visuales.')); ?>
                         </p>
                     </div>
 
                     <div class="service-spec-card">
-                        <div class="spec-badge">Modularidad Segura</div>
-                        <h3 class="spec-title">Tarimas y Pasarelas</h3>
+                        <div class="spec-badge"><?php echo esc_html(lp_get_setting('lp_serv_e2_badge', 'Modularidad Segura')); ?></div>
+                        <h3 class="spec-title"><?php echo esc_html(lp_get_setting('lp_serv_e2_title', 'Tarimas y Pasarelas')); ?></h3>
                         <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
-                            Módulos regulables en altura con faldones perimetrales, escaleras de acceso antideslizantes, barandas y atriles para conferencias o desfiles.
+                            <?php echo esc_html(lp_get_setting('lp_serv_e2_desc', 'Módulos regulables en altura con faldones perimetrales, escaleras de acceso antideslizantes, barandas y atriles para conferencias o desfiles.')); ?>
                         </p>
                     </div>
 
                     <div class="service-spec-card">
-                        <div class="spec-badge">Protección Total</div>
-                        <h3 class="spec-title">Carpas Estructurales</h3>
+                        <div class="spec-badge"><?php echo esc_html(lp_get_setting('lp_serv_e3_badge', 'Protección Total')); ?></div>
+                        <h3 class="spec-title"><?php echo esc_html(lp_get_setting('lp_serv_e3_title', 'Carpas Estructurales')); ?></h3>
                         <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
-                            Carpas tipo hangar de 6x12m y mayores dimensiones, impermeables, con laterales transparentes tipo cristal y plafones decorativos en telas.
+                            <?php echo esc_html(lp_get_setting('lp_serv_e3_desc', 'Carpas tipo hangar de 6x12m y mayores dimensiones, impermeables, con laterales transparentes tipo cristal y plafones decorativos en telas.')); ?>
                         </p>
                     </div>
                 </div>
             </div>
 
             <!-- Call to Action Card -->
+            <?php
+            $cta_url      = lp_get_setting('lp_serv_cta_url', '');
+            $cta_btn_show = lp_get_setting('lp_serv_cta_btn_show', true);
+            $cta_link     = !empty($cta_url) ? esc_url($cta_url) : lp_whatsapp_url('¡Hola! Deseo cotizar un paquete personalizado de servicios para mi evento.');
+            ?>
             <div class="banner-advisory" style="margin-top: 40px;">
                 <div class="banner-advisory-inner">
                     <div>
                         <h3 style="font-size: clamp(1.4rem, 3.5vw, 1.8rem); margin-bottom: 10px;"><?php echo esc_html($cta_title); ?></h3>
                         <p style="color: var(--text-muted);"><?php echo esc_html($cta_desc); ?></p>
                     </div>
+                    <?php if ($cta_btn_show) : ?>
                     <div>
-                        <a href="<?php echo esc_url(lp_whatsapp_url('¡Hola! Deseo cotizar un paquete personalizado de servicios para mi evento.')); ?>" target="_blank" rel="noopener" class="btn btn-teal">
+                        <a href="<?php echo esc_url($cta_link); ?>" target="_blank" rel="noopener" class="btn btn-teal">
                             <i class="fa-brands fa-whatsapp"></i> <?php echo esc_html($cta_btn); ?>
                         </a>
                     </div>
+                    <?php endif; ?>
                 </div>
             </div>
 

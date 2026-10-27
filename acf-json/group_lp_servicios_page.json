@@ -1,7 +1,19 @@
 {
     "key": "group_lp_servicios_page",
-    "title": "Personalización - Página de Servicios",
+    "title": "Página de Servicios - Latin Party Eventos",
     "fields": [
+        {
+            "key": "tab_s_hero",
+            "label": "Cabecera (Hero)",
+            "type": "tab"
+        },
+        {
+            "key": "field_lp_serv_page_badge",
+            "label": "Badge Cabecera",
+            "name": "lp_serv_page_badge",
+            "type": "text",
+            "default_value": "Nuestras Soluciones"
+        },
         {
             "key": "field_lp_serv_page_title",
             "label": "Título de la Página",
@@ -16,6 +28,327 @@
             "type": "textarea",
             "rows": 3,
             "default_value": "En Latin Party Eventos ofrecemos soluciones completas para cada tipo de celebración. Desde el sonido profesional, la iluminación y la ambientación, hasta la producción integral de conciertos, bodas y eventos corporativos."
+        },
+        {
+            "key": "tab_s_audio",
+            "label": "1. Audio Profesional",
+            "type": "tab"
+        },
+        {
+            "key": "field_lp_serv_audio_badge",
+            "label": "Audio - Badge",
+            "name": "lp_serv_audio_badge",
+            "type": "text",
+            "default_value": "Potencia Acústica"
+        },
+        {
+            "key": "field_lp_serv_audio_title",
+            "label": "Audio - Título",
+            "name": "lp_serv_audio_title",
+            "type": "text",
+            "default_value": "Soluciones de Audio Profesional"
+        },
+        {
+            "key": "field_lp_serv_audio_desc",
+            "label": "Audio - Descripción",
+            "name": "lp_serv_audio_desc",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Configuraciones acústicas de vanguardia calibradas digitalmente para garantizar máxima inteligibilidad de la voz y calidez sonora en cada rincón del recinto."
+        },
+        {
+            "key": "field_lp_serv_a1_badge",
+            "label": "Audio Card 1 - Badge",
+            "name": "lp_serv_a1_badge",
+            "type": "text",
+            "default_value": "Hasta 100 Personas"
+        },
+        {
+            "key": "field_lp_serv_a1_title",
+            "label": "Audio Card 1 - Título",
+            "name": "lp_serv_a1_title",
+            "type": "text",
+            "default_value": "Sonido Convencional"
+        },
+        {
+            "key": "field_lp_serv_a1_desc",
+            "label": "Audio Card 1 - Descripción",
+            "name": "lp_serv_a1_desc",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Ideal para eventos íntimos, matrimonios civiles, 15 años y salones medianos. Altavoces de alta fidelidad, micrófonos inalámbricos UHF y consolas limpias."
+        },
+        {
+            "key": "field_lp_serv_a2_badge",
+            "label": "Audio Card 2 - Badge",
+            "name": "lp_serv_a2_badge",
+            "type": "text",
+            "default_value": "Gran Formato"
+        },
+        {
+            "key": "field_lp_serv_a2_title",
+            "label": "Audio Card 2 - Título",
+            "name": "lp_serv_a2_title",
+            "type": "text",
+            "default_value": "Sonido Line Array"
+        },
+        {
+            "key": "field_lp_serv_a2_desc",
+            "label": "Audio Card 2 - Descripción",
+            "name": "lp_serv_a2_desc",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Para conciertos, festivales, asambleas y recintos masivos. Distribución de presión sonora uniforme en grandes distancias sin pérdida de agudos ni saturación de graves."
+        },
+        {
+            "key": "field_lp_serv_a3_badge",
+            "label": "Audio Card 3 - Badge",
+            "name": "lp_serv_a3_badge",
+            "type": "text",
+            "default_value": "Espectáculos Vivos"
+        },
+        {
+            "key": "field_lp_serv_a3_title",
+            "label": "Audio Card 3 - Título",
+            "name": "lp_serv_a3_title",
+            "type": "text",
+            "default_value": "Sonido Tipo Concierto"
+        },
+        {
+            "key": "field_lp_serv_a3_desc",
+            "label": "Audio Card 3 - Descripción",
+            "name": "lp_serv_a3_desc",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Configuración completa para orquestas y bandas en vivo: microfonía instrumental Shure/Sennheiser, monitores de piso, consolas digitales multicanal y técnicos en vivo."
+        },
+        {
+            "key": "tab_s_lights",
+            "label": "2. Iluminación DMX",
+            "type": "tab"
+        },
+        {
+            "key": "field_lp_serv_lights_badge",
+            "label": "Iluminación - Badge",
+            "name": "lp_serv_lights_badge",
+            "type": "text",
+            "default_value": "Shows Visuales"
+        },
+        {
+            "key": "field_lp_serv_lights_title",
+            "label": "Iluminación - Título",
+            "name": "lp_serv_lights_title",
+            "type": "text",
+            "default_value": "Iluminación Creativa & Control DMX"
+        },
+        {
+            "key": "field_lp_serv_lights_desc",
+            "label": "Iluminación - Descripción",
+            "name": "lp_serv_lights_desc",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Crea atmósferas envolventes y sincronizadas que realzan momentos clave como el vals, el brindis o la apertura del baile."
+        },
+        {
+            "key": "field_lp_serv_l1_badge",
+            "label": "Iluminación Card 1 - Badge",
+            "name": "lp_serv_l1_badge",
+            "type": "text",
+            "default_value": "Dinámicas 360°"
+        },
+        {
+            "key": "field_lp_serv_l1_title",
+            "label": "Iluminación Card 1 - Título",
+            "name": "lp_serv_l1_title",
+            "type": "text",
+            "default_value": "Cabezas Móviles Beam & Spot"
+        },
+        {
+            "key": "field_lp_serv_l1_desc",
+            "label": "Iluminación Card 1 - Descripción",
+            "name": "lp_serv_l1_desc",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Efectos de prisma, gobos personalizados con el logo de tu empresa o las iniciales de los novios, y haces de luz potentes que llenan todo el salón."
+        },
+        {
+            "key": "field_lp_serv_l2_badge",
+            "label": "Iluminación Card 2 - Badge",
+            "name": "lp_serv_l2_badge",
+            "type": "text",
+            "default_value": "Software Computarizado"
+        },
+        {
+            "key": "field_lp_serv_l2_title",
+            "label": "Iluminación Card 2 - Título",
+            "name": "lp_serv_l2_title",
+            "type": "text",
+            "default_value": "Control DMX en Tiempo Real"
+        },
+        {
+            "key": "field_lp_serv_l2_desc",
+            "label": "Iluminación Card 2 - Descripción",
+            "name": "lp_serv_l2_desc",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Programación milimétrica por escenas. Cambios de color acordes a la temática de la decoración y sincronía total con la música."
+        },
+        {
+            "key": "field_lp_serv_l3_badge",
+            "label": "Iluminación Card 3 - Badge",
+            "name": "lp_serv_l3_badge",
+            "type": "text",
+            "default_value": "Ambientación Perimetral"
+        },
+        {
+            "key": "field_lp_serv_l3_title",
+            "label": "Iluminación Card 3 - Título",
+            "name": "lp_serv_l3_title",
+            "type": "text",
+            "default_value": "Par LED, Neón & City Color"
+        },
+        {
+            "key": "field_lp_serv_l3_desc",
+            "label": "Iluminación Card 3 - Descripción",
+            "name": "lp_serv_l3_desc",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Baño de luz a paredes, columnas y jardines para transformar salones comunes en espacios de alta sofisticación y glamour."
+        },
+        {
+            "key": "tab_s_struct",
+            "label": "3. Pistas LED & Tarimas",
+            "type": "tab"
+        },
+        {
+            "key": "field_lp_serv_led_badge",
+            "label": "Pistas - Badge",
+            "name": "lp_serv_led_badge",
+            "type": "text",
+            "default_value": "Estructuras & Baile"
+        },
+        {
+            "key": "field_lp_serv_led_title",
+            "label": "Pistas - Título",
+            "name": "lp_serv_led_title",
+            "type": "text",
+            "default_value": "Pistas de Baile LED, Tarimas y Carpas"
+        },
+        {
+            "key": "field_lp_serv_led_desc",
+            "label": "Pistas - Descripción",
+            "name": "lp_serv_led_desc",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Infraestructura sólida con certificación técnica para eventos al aire libre o en salones cerrados."
+        },
+        {
+            "key": "field_lp_serv_e1_badge",
+            "label": "Pistas Card 1 - Badge",
+            "name": "lp_serv_e1_badge",
+            "type": "text",
+            "default_value": "Efecto WOW"
+        },
+        {
+            "key": "field_lp_serv_e1_title",
+            "label": "Pistas Card 1 - Título",
+            "name": "lp_serv_e1_title",
+            "type": "text",
+            "default_value": "Pistas de Baile LED"
+        },
+        {
+            "key": "field_lp_serv_e1_desc",
+            "label": "Pistas Card 1 - Descripción",
+            "name": "lp_serv_e1_desc",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Paneles modulares de alta resistencia con cristal templado. Gráficos de túnel infinito, estrellas, corazones, nombres y ecualizadores visuales."
+        },
+        {
+            "key": "field_lp_serv_e2_badge",
+            "label": "Pistas Card 2 - Badge",
+            "name": "lp_serv_e2_badge",
+            "type": "text",
+            "default_value": "Modularidad Segura"
+        },
+        {
+            "key": "field_lp_serv_e2_title",
+            "label": "Pistas Card 2 - Título",
+            "name": "lp_serv_e2_title",
+            "type": "text",
+            "default_value": "Tarimas y Pasarelas"
+        },
+        {
+            "key": "field_lp_serv_e2_desc",
+            "label": "Pistas Card 2 - Descripción",
+            "name": "lp_serv_e2_desc",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Módulos regulables en altura con faldones perimetrales, escaleras de acceso antideslizantes, barandas y atriles para conferencias o desfiles."
+        },
+        {
+            "key": "field_lp_serv_e3_badge",
+            "label": "Pistas Card 3 - Badge",
+            "name": "lp_serv_e3_badge",
+            "type": "text",
+            "default_value": "Protección Total"
+        },
+        {
+            "key": "field_lp_serv_e3_title",
+            "label": "Pistas Card 3 - Título",
+            "name": "lp_serv_e3_title",
+            "type": "text",
+            "default_value": "Carpas Estructurales"
+        },
+        {
+            "key": "field_lp_serv_e3_desc",
+            "label": "Pistas Card 3 - Descripción",
+            "name": "lp_serv_e3_desc",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Carpas tipo hangar de 6x12m y mayores dimensiones, impermeables, con laterales transparentes tipo cristal y plafones decorativos en telas."
+        },
+        {
+            "key": "tab_s_banner",
+            "label": "4. Banner Asesoría",
+            "type": "tab"
+        },
+        {
+            "key": "field_lp_serv_cta_title",
+            "label": "Banner Asesoría - Título",
+            "name": "lp_serv_cta_title",
+            "type": "text",
+            "default_value": "¿Necesitas un paquete personalizado?"
+        },
+        {
+            "key": "field_lp_serv_cta_desc",
+            "label": "Banner Asesoría - Descripción",
+            "name": "lp_serv_cta_desc",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Armamos la combinación perfecta de sonido, luces, pista LED y carpas según tu presupuesto y cantidad de invitados."
+        },
+        {
+            "key": "field_lp_serv_cta_btn_show",
+            "label": "Mostrar Botón Asesoría",
+            "name": "lp_serv_cta_btn_show",
+            "type": "true_false",
+            "ui": 1,
+            "default_value": 1
+        },
+        {
+            "key": "field_lp_serv_cta_btn",
+            "label": "Banner Asesoría - Texto del Botón",
+            "name": "lp_serv_cta_btn",
+            "type": "text",
+            "default_value": "Hablar con un Asesor"
+        },
+        {
+            "key": "field_lp_serv_cta_url",
+            "label": "Banner Asesoría - Enlace del Botón (vacío para WhatsApp)",
+            "name": "lp_serv_cta_url",
+            "type": "text",
+            "default_value": ""
         }
     ],
     "location": [
@@ -25,8 +358,17 @@
                 "operator": "==",
                 "value": "page-servicios.php"
             }
+        ],
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "latin-party-servicios"
+            }
         ]
     ],
-    "menu_order": 2,
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
     "active": true
 }

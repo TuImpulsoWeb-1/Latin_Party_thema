@@ -4,11 +4,16 @@
         "title": "Ajustes Generales - Latin Party Eventos",
         "fields": [
             {
+                "key": "tab_opt_brand",
+                "label": "Identidad y Marca",
+                "type": "tab"
+            },
+            {
                 "key": "field_lp_site_logo",
-                "label": "Logo de la Empresa",
+                "label": "Logo Oficial de la Empresa",
                 "name": "lp_site_logo",
                 "type": "image",
-                "instructions": "Sube el logo oficial (PNG transparente o JPG).",
+                "instructions": "Sube el logo oficial (PNG transparente recomendado).",
                 "return_format": "array",
                 "preview_size": "medium"
             },
@@ -21,11 +26,11 @@
             },
             {
                 "key": "field_lp_whatsapp_number",
-                "label": "Número de WhatsApp (con código de país)",
+                "label": "Número WhatsApp (código de país sin espacios ni símbolos)",
                 "name": "lp_whatsapp_number",
                 "type": "text",
                 "default_value": "573118487785",
-                "instructions": "Ej: 573118487785 (sin espacios ni símbolos)"
+                "instructions": "Ejemplo: 573118487785"
             },
             {
                 "key": "field_lp_whatsapp_link",
@@ -35,8 +40,16 @@
                 "default_value": "https://wa.link/p2g3qg"
             },
             {
+                "key": "field_lp_whatsapp_default_message",
+                "label": "Mensaje Predeterminado de WhatsApp",
+                "name": "lp_whatsapp_default_message",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "¡Hola Latin Party Eventos! Deseo solicitar asesoría para mi evento."
+            },
+            {
                 "key": "field_lp_contact_email",
-                "label": "Correo de Contacto",
+                "label": "Correo de Contacto / Cotizaciones",
                 "name": "lp_contact_email",
                 "type": "email",
                 "default_value": "contacto@latinpartyeventos.com"
@@ -50,10 +63,15 @@
             },
             {
                 "key": "field_lp_location",
-                "label": "Ubicación / Ciudad",
+                "label": "Ubicación / Ciudad Sede",
                 "name": "lp_location",
                 "type": "text",
                 "default_value": "Bogotá, Colombia"
+            },
+            {
+                "key": "tab_opt_social",
+                "label": "Redes Sociales",
+                "type": "tab"
             },
             {
                 "key": "field_lp_facebook",
@@ -70,8 +88,61 @@
                 "default_value": "https://www.instagram.com/latinparty?igsh=cWtsYWliY2pod2p5"
             },
             {
+                "key": "field_lp_tiktok",
+                "label": "Enlace de TikTok (Opcional)",
+                "name": "lp_tiktok",
+                "type": "url",
+                "default_value": ""
+            },
+            {
+                "key": "field_lp_youtube",
+                "label": "Enlace de YouTube (Opcional)",
+                "name": "lp_youtube",
+                "type": "url",
+                "default_value": ""
+            },
+            {
+                "key": "tab_opt_header_footer",
+                "label": "Cabecera y Pie de Página",
+                "type": "tab"
+            },
+            {
+                "key": "field_lp_show_topbar",
+                "label": "Mostrar Barra Superior (Topbar)",
+                "name": "lp_show_topbar",
+                "type": "true_false",
+                "ui": 1,
+                "default_value": 1
+            },
+            {
+                "key": "field_lp_header_btn_show",
+                "label": "Mostrar Botón en Cabecera",
+                "name": "lp_header_btn_show",
+                "type": "true_false",
+                "ui": 1,
+                "default_value": 1
+            },
+            {
+                "key": "field_lp_header_btn_text",
+                "label": "Texto del Botón de Cabecera",
+                "name": "lp_header_btn_text",
+                "type": "text",
+                "default_value": "Cotizar"
+            },
+            {
+                "key": "field_lp_header_btn_action",
+                "label": "Acción del Botón de Cabecera",
+                "name": "lp_header_btn_action",
+                "type": "select",
+                "choices": {
+                    "whatsapp": "Abrir chat directo de WhatsApp",
+                    "contacto": "Ir a la página de Contacto"
+                },
+                "default_value": "whatsapp"
+            },
+            {
                 "key": "field_lp_footer_about",
-                "label": "Texto Descriptivo del Footer",
+                "label": "Descripción de la Empresa en el Footer",
                 "name": "lp_footer_about",
                 "type": "textarea",
                 "rows": 3,
@@ -79,10 +150,18 @@
             },
             {
                 "key": "field_lp_copyright",
-                "label": "Texto de Copyright",
+                "label": "Texto de Copyright en el Footer",
                 "name": "lp_copyright",
                 "type": "text",
                 "default_value": "Latin Party Eventos. Todos los derechos reservados."
+            },
+            {
+                "key": "field_lp_show_whatsapp_float",
+                "label": "Mostrar Botón Flotante de WhatsApp",
+                "name": "lp_show_whatsapp_float",
+                "type": "true_false",
+                "ui": 1,
+                "default_value": 1
             }
         ],
         "location": [
@@ -97,29 +176,27 @@
         "menu_order": 0,
         "position": "normal",
         "style": "default",
-        "label_placement": "top",
-        "instruction_placement": "label",
         "active": true
     },
     {
         "key": "group_lp_home_fields",
-        "title": "Personalización - Página de Inicio",
+        "title": "Página de Inicio - Latin Party Eventos",
         "fields": [
             {
-                "key": "tab_lp_hero",
-                "label": "Hero Principal",
+                "key": "tab_h_hero",
+                "label": "1. Hero Principal",
                 "type": "tab"
             },
             {
                 "key": "field_lp_hero_badge",
-                "label": "Badge Superior",
+                "label": "Badge / Etiqueta Superior",
                 "name": "lp_hero_badge",
                 "type": "text",
                 "default_value": "⭐ Producción Integral de Eventos"
             },
             {
                 "key": "field_lp_hero_title",
-                "label": "Título Principal",
+                "label": "Título Principal del Hero",
                 "name": "lp_hero_title",
                 "type": "text",
                 "default_value": "Vive la fiesta, nosotros la creamos"
@@ -140,6 +217,14 @@
                 "default_value": "En Latin Party Eventos convertimos tus ideas en experiencias únicas. Desde bodas y 15 años hasta eventos corporativos y conciertos, nuestro equipo se encarga de cada detalle."
             },
             {
+                "key": "field_lp_hero_btn1_show",
+                "label": "Mostrar Botón 1",
+                "name": "lp_hero_btn1_show",
+                "type": "true_false",
+                "ui": 1,
+                "default_value": 1
+            },
+            {
                 "key": "field_lp_hero_btn1_text",
                 "label": "Botón 1 Texto",
                 "name": "lp_hero_btn1_text",
@@ -152,6 +237,14 @@
                 "name": "lp_hero_btn1_url",
                 "type": "text",
                 "default_value": "#contacto"
+            },
+            {
+                "key": "field_lp_hero_btn2_show",
+                "label": "Mostrar Botón 2",
+                "name": "lp_hero_btn2_show",
+                "type": "true_false",
+                "ui": 1,
+                "default_value": 1
             },
             {
                 "key": "field_lp_hero_btn2_text",
@@ -169,21 +262,28 @@
             },
             {
                 "key": "field_lp_hero_img1",
-                "label": "Imagen Hero 1 (Fondo)",
+                "label": "Slider Imagen 1 (Fondo)",
                 "name": "lp_hero_img1",
                 "type": "image",
                 "return_format": "array"
             },
             {
                 "key": "field_lp_hero_img2",
-                "label": "Imagen Hero 2 (Fondo)",
+                "label": "Slider Imagen 2 (Fondo)",
                 "name": "lp_hero_img2",
                 "type": "image",
                 "return_format": "array"
             },
             {
-                "key": "tab_lp_stats",
-                "label": "Métricas / Estadísticas",
+                "key": "field_lp_hero_img3",
+                "label": "Slider Imagen 3 (Fondo)",
+                "name": "lp_hero_img3",
+                "type": "image",
+                "return_format": "array"
+            },
+            {
+                "key": "tab_h_stats",
+                "label": "2. Métricas / Estadísticas",
                 "type": "tab"
             },
             {
@@ -243,9 +343,16 @@
                 "default_value": "Equipos Propios DMX & LED"
             },
             {
-                "key": "tab_lp_advisory",
-                "label": "Banner Asesoría",
+                "key": "tab_h_adv",
+                "label": "3. Banner Asesoría",
                 "type": "tab"
+            },
+            {
+                "key": "field_lp_adv_badge",
+                "label": "Badge Asesoría",
+                "name": "lp_adv_badge",
+                "type": "text",
+                "default_value": "Asesoría Gratuita"
             },
             {
                 "key": "field_lp_adv_title",
@@ -263,6 +370,14 @@
                 "default_value": "Convierte tu idea en un evento inolvidable. Agenda una sesión gratuita con nuestros expertos y descubre cómo darle vida a tu celebración, sin compromiso."
             },
             {
+                "key": "field_lp_adv_btn_show",
+                "label": "Mostrar Botón Asesoría",
+                "name": "lp_adv_btn_show",
+                "type": "true_false",
+                "ui": 1,
+                "default_value": 1
+            },
+            {
                 "key": "field_lp_adv_btn_text",
                 "label": "Texto Botón Asesoría",
                 "name": "lp_adv_btn_text",
@@ -270,53 +385,738 @@
                 "default_value": "Agendar Asesoría Gratuita"
             },
             {
-                "key": "tab_lp_testimonials",
-                "label": "Testimonios",
+                "key": "field_lp_adv_btn_url",
+                "label": "Enlace Botón Asesoría (dejar vacío para WhatsApp)",
+                "name": "lp_adv_btn_url",
+                "type": "text",
+                "default_value": ""
+            },
+            {
+                "key": "tab_h_events",
+                "label": "4. Categorías de Eventos",
                 "type": "tab"
             },
             {
+                "key": "field_lp_events_badge",
+                "label": "Badge Sección Eventos",
+                "name": "lp_events_badge",
+                "type": "text",
+                "default_value": "Celebraciones Exclusivas"
+            },
+            {
+                "key": "field_lp_events_title",
+                "label": "Título Sección Eventos",
+                "name": "lp_events_title",
+                "type": "text",
+                "default_value": "Nuestros Eventos"
+            },
+            {
+                "key": "field_lp_events_desc",
+                "label": "Descripción Sección Eventos",
+                "name": "lp_events_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Cada celebración es única, por eso en Latin Party Eventos diseñamos experiencias a tu medida. Desde cumpleaños y bodas hasta fiestas corporativas y conciertos."
+            },
+            {
+                "key": "field_lp_ev1_badge",
+                "label": "Evento 1 Badge",
+                "name": "lp_ev1_badge",
+                "type": "text",
+                "default_value": "Celebración Soñada"
+            },
+            {
+                "key": "field_lp_ev1_title",
+                "label": "Evento 1 Título",
+                "name": "lp_ev1_title",
+                "type": "text",
+                "default_value": "15 Años"
+            },
+            {
+                "key": "field_lp_ev1_desc",
+                "label": "Evento 1 Descripción",
+                "name": "lp_ev1_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Montajes inolvidables con luces robóticas, pista LED de baile, efectos especiales y sonido de primer nivel."
+            },
+            {
+                "key": "field_lp_ev1_img",
+                "label": "Evento 1 Imagen",
+                "name": "lp_ev1_img",
+                "type": "image",
+                "return_format": "array"
+            },
+            {
+                "key": "field_lp_ev1_btn",
+                "label": "Evento 1 Texto Enlace",
+                "name": "lp_ev1_btn",
+                "type": "text",
+                "default_value": "Ver detalles"
+            },
+            {
+                "key": "field_lp_ev1_url",
+                "label": "Evento 1 Enlace URL (vacío para Servicios)",
+                "name": "lp_ev1_url",
+                "type": "text",
+                "default_value": ""
+            },
+            {
+                "key": "field_lp_ev2_badge",
+                "label": "Evento 2 Badge",
+                "name": "lp_ev2_badge",
+                "type": "text",
+                "default_value": "Elegancia & Romance"
+            },
+            {
+                "key": "field_lp_ev2_title",
+                "label": "Evento 2 Título",
+                "name": "lp_ev2_title",
+                "type": "text",
+                "default_value": "Bodas"
+            },
+            {
+                "key": "field_lp_ev2_desc",
+                "label": "Evento 2 Descripción",
+                "name": "lp_ev2_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Atmósferas cálidas, iluminación perimetral sutil, drapeados en telas, sonido de ceremonia y fiesta nupcial."
+            },
+            {
+                "key": "field_lp_ev2_img",
+                "label": "Evento 2 Imagen",
+                "name": "lp_ev2_img",
+                "type": "image",
+                "return_format": "array"
+            },
+            {
+                "key": "field_lp_ev2_btn",
+                "label": "Evento 2 Texto Enlace",
+                "name": "lp_ev2_btn",
+                "type": "text",
+                "default_value": "Ver detalles"
+            },
+            {
+                "key": "field_lp_ev2_url",
+                "label": "Evento 2 Enlace URL (vacío para Servicios)",
+                "name": "lp_ev2_url",
+                "type": "text",
+                "default_value": ""
+            },
+            {
+                "key": "field_lp_ev3_badge",
+                "label": "Evento 3 Badge",
+                "name": "lp_ev3_badge",
+                "type": "text",
+                "default_value": "Impacto de Marca"
+            },
+            {
+                "key": "field_lp_ev3_title",
+                "label": "Evento 3 Título",
+                "name": "lp_ev3_title",
+                "type": "text",
+                "default_value": "Corporativos"
+            },
+            {
+                "key": "field_lp_ev3_desc",
+                "label": "Evento 3 Descripción",
+                "name": "lp_ev3_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Congresos, lanzamientos de marca, ferias y fiestas de fin de año con tecnología audiovisual de vanguardia."
+            },
+            {
+                "key": "field_lp_ev3_img",
+                "label": "Evento 3 Imagen",
+                "name": "lp_ev3_img",
+                "type": "image",
+                "return_format": "array"
+            },
+            {
+                "key": "field_lp_ev3_btn",
+                "label": "Evento 3 Texto Enlace",
+                "name": "lp_ev3_btn",
+                "type": "text",
+                "default_value": "Ver detalles"
+            },
+            {
+                "key": "field_lp_ev3_url",
+                "label": "Evento 3 Enlace URL (vacío para Servicios)",
+                "name": "lp_ev3_url",
+                "type": "text",
+                "default_value": ""
+            },
+            {
+                "key": "field_lp_ev4_badge",
+                "label": "Evento 4 Badge",
+                "name": "lp_ev4_badge",
+                "type": "text",
+                "default_value": "Pura Energía"
+            },
+            {
+                "key": "field_lp_ev4_title",
+                "label": "Evento 4 Título",
+                "name": "lp_ev4_title",
+                "type": "text",
+                "default_value": "Fiestas"
+            },
+            {
+                "key": "field_lp_ev4_desc",
+                "label": "Evento 4 Descripción",
+                "name": "lp_ev4_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Conciertos privados, cumpleaños temáticos y aniversarios con tarimas modulares y pantallas gigantes."
+            },
+            {
+                "key": "field_lp_ev4_img",
+                "label": "Evento 4 Imagen",
+                "name": "lp_ev4_img",
+                "type": "image",
+                "return_format": "array"
+            },
+            {
+                "key": "field_lp_ev4_btn",
+                "label": "Evento 4 Texto Enlace",
+                "name": "lp_ev4_btn",
+                "type": "text",
+                "default_value": "Ver detalles"
+            },
+            {
+                "key": "field_lp_ev4_url",
+                "label": "Evento 4 Enlace URL (vacío para Servicios)",
+                "name": "lp_ev4_url",
+                "type": "text",
+                "default_value": ""
+            },
+            {
+                "key": "tab_h_services",
+                "label": "5. Servicios Destacados",
+                "type": "tab"
+            },
+            {
+                "key": "field_lp_serv_badge",
+                "label": "Badge Sección Servicios",
+                "name": "lp_serv_badge",
+                "type": "text",
+                "default_value": "Tecnología de Punta"
+            },
+            {
+                "key": "field_lp_serv_title",
+                "label": "Título Sección Servicios",
+                "name": "lp_serv_title",
+                "type": "text",
+                "default_value": "Nuestros Servicios"
+            },
+            {
+                "key": "field_lp_serv_subtitle",
+                "label": "Subtítulo Sección Servicios",
+                "name": "lp_serv_subtitle",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Equipamiento técnico profesional propio para garantizar que la potencia, el color y la calidad visual de tu evento sean impecables."
+            },
+            {
+                "key": "field_lp_serv1_title",
+                "label": "Servicio 1 Título",
+                "name": "lp_serv1_title",
+                "type": "text",
+                "default_value": "Sonido Profesional"
+            },
+            {
+                "key": "field_lp_serv1_desc",
+                "label": "Servicio 1 Descripción",
+                "name": "lp_serv1_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "La potencia y claridad que tu evento merece. Desde sistemas convencionales hasta line array de gran formato, garantizamos una experiencia auditiva impecable para 50 hasta 5,000 personas."
+            },
+            {
+                "key": "field_lp_serv1_img",
+                "label": "Servicio 1 Imagen",
+                "name": "lp_serv1_img",
+                "type": "image",
+                "return_format": "array"
+            },
+            {
+                "key": "field_lp_serv1_btn",
+                "label": "Servicio 1 Texto Botón",
+                "name": "lp_serv1_btn",
+                "type": "text",
+                "default_value": "Ver configuración"
+            },
+            {
+                "key": "field_lp_serv1_url",
+                "label": "Servicio 1 Enlace URL",
+                "name": "lp_serv1_url",
+                "type": "text",
+                "default_value": ""
+            },
+            {
+                "key": "field_lp_serv2_title",
+                "label": "Servicio 2 Título",
+                "name": "lp_serv2_title",
+                "type": "text",
+                "default_value": "Iluminación Creativa"
+            },
+            {
+                "key": "field_lp_serv2_desc",
+                "label": "Servicio 2 Descripción",
+                "name": "lp_serv2_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Transformamos espacios con luces LED, cabezas móviles Beam/Spot y control DMX computarizado que generan atmósferas envolventes y sincronizadas al ritmo de la música."
+            },
+            {
+                "key": "field_lp_serv2_img",
+                "label": "Servicio 2 Imagen",
+                "name": "lp_serv2_img",
+                "type": "image",
+                "return_format": "array"
+            },
+            {
+                "key": "field_lp_serv2_btn",
+                "label": "Servicio 2 Texto Botón",
+                "name": "lp_serv2_btn",
+                "type": "text",
+                "default_value": "Ver configuración"
+            },
+            {
+                "key": "field_lp_serv2_url",
+                "label": "Servicio 2 Enlace URL",
+                "name": "lp_serv2_url",
+                "type": "text",
+                "default_value": ""
+            },
+            {
+                "key": "field_lp_serv3_title",
+                "label": "Servicio 3 Título",
+                "name": "lp_serv3_title",
+                "type": "text",
+                "default_value": "Pantallas y Visuales"
+            },
+            {
+                "key": "field_lp_serv3_desc",
+                "label": "Servicio 3 Descripción",
+                "name": "lp_serv3_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Impacta a tu público con pantallas LED de alta definición y proyectores de alto brillo, ideales para videos corporativos, transmisiones en vivo y backings interactivos."
+            },
+            {
+                "key": "field_lp_serv3_img",
+                "label": "Servicio 3 Imagen",
+                "name": "lp_serv3_img",
+                "type": "image",
+                "return_format": "array"
+            },
+            {
+                "key": "field_lp_serv3_btn",
+                "label": "Servicio 3 Texto Botón",
+                "name": "lp_serv3_btn",
+                "type": "text",
+                "default_value": "Ver configuración"
+            },
+            {
+                "key": "field_lp_serv3_url",
+                "label": "Servicio 3 Enlace URL",
+                "name": "lp_serv3_url",
+                "type": "text",
+                "default_value": ""
+            },
+            {
+                "key": "field_lp_serv4_title",
+                "label": "Servicio 4 Título",
+                "name": "lp_serv4_title",
+                "type": "text",
+                "default_value": "Escenarios y Tarimas"
+            },
+            {
+                "key": "field_lp_serv4_desc",
+                "label": "Servicio 4 Descripción",
+                "name": "lp_serv4_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Estructuras seguras, pasarelas, carpas tipo hangar y truss modulares en aluminio que se adaptan a cualquier espectáculo, desde presentaciones íntimas hasta grandes conciertos."
+            },
+            {
+                "key": "field_lp_serv4_img",
+                "label": "Servicio 4 Imagen",
+                "name": "lp_serv4_img",
+                "type": "image",
+                "return_format": "array"
+            },
+            {
+                "key": "field_lp_serv4_btn",
+                "label": "Servicio 4 Texto Botón",
+                "name": "lp_serv4_btn",
+                "type": "text",
+                "default_value": "Ver configuración"
+            },
+            {
+                "key": "field_lp_serv4_url",
+                "label": "Servicio 4 Enlace URL",
+                "name": "lp_serv4_url",
+                "type": "text",
+                "default_value": ""
+            },
+            {
+                "key": "field_lp_serv5_title",
+                "label": "Servicio 5 Título",
+                "name": "lp_serv5_title",
+                "type": "text",
+                "default_value": "Pistas de Baile LED DMX"
+            },
+            {
+                "key": "field_lp_serv5_desc",
+                "label": "Servicio 5 Descripción",
+                "name": "lp_serv5_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "El centro de atracción de la fiesta. Módulos de vidrio templado con gráficos animados, textos y destellos luminosos para que el baile sea el momento más vibrante de la noche."
+            },
+            {
+                "key": "field_lp_serv5_img",
+                "label": "Servicio 5 Imagen",
+                "name": "lp_serv5_img",
+                "type": "image",
+                "return_format": "array"
+            },
+            {
+                "key": "field_lp_serv5_btn",
+                "label": "Servicio 5 Texto Botón",
+                "name": "lp_serv5_btn",
+                "type": "text",
+                "default_value": "Ver configuración"
+            },
+            {
+                "key": "field_lp_serv5_url",
+                "label": "Servicio 5 Enlace URL",
+                "name": "lp_serv5_url",
+                "type": "text",
+                "default_value": ""
+            },
+            {
+                "key": "field_lp_serv6_title",
+                "label": "Servicio 6 Título",
+                "name": "lp_serv6_title",
+                "type": "text",
+                "default_value": "Mobiliario & Decoración"
+            },
+            {
+                "key": "field_lp_serv6_desc",
+                "label": "Servicio 6 Descripción",
+                "name": "lp_serv6_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Cada detalle cuenta. Ofrecemos mobiliario moderno tipo lounge, sillas Tiffany, mesas iluminadas y drapeados en telas que realzan el estilo y la comodidad de tu celebración."
+            },
+            {
+                "key": "field_lp_serv6_img",
+                "label": "Servicio 6 Imagen",
+                "name": "lp_serv6_img",
+                "type": "image",
+                "return_format": "array"
+            },
+            {
+                "key": "field_lp_serv6_btn",
+                "label": "Servicio 6 Texto Botón",
+                "name": "lp_serv6_btn",
+                "type": "text",
+                "default_value": "Ver configuración"
+            },
+            {
+                "key": "field_lp_serv6_url",
+                "label": "Servicio 6 Enlace URL",
+                "name": "lp_serv6_url",
+                "type": "text",
+                "default_value": ""
+            },
+            {
+                "key": "tab_h_pillars",
+                "label": "6. Pilares de Calidad",
+                "type": "tab"
+            },
+            {
+                "key": "field_lp_pillars_badge",
+                "label": "Badge Sección Pilares",
+                "name": "lp_pillars_badge",
+                "type": "text",
+                "default_value": "Garantía de Calidad"
+            },
+            {
+                "key": "field_lp_pillars_title",
+                "label": "Título Sección Pilares",
+                "name": "lp_pillars_title",
+                "type": "text",
+                "default_value": "Nuestros Pilares"
+            },
+            {
+                "key": "field_lp_pillars_desc",
+                "label": "Descripción Sección Pilares",
+                "name": "lp_pillars_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "El estándar de excelencia técnica y humana que respalda cada uno de nuestros montajes."
+            },
+            {
+                "key": "field_lp_pillar1_title",
+                "label": "Pilar 1 Título",
+                "name": "lp_pillar1_title",
+                "type": "text",
+                "default_value": "Profesionalismo"
+            },
+            {
+                "key": "field_lp_pillar1_desc",
+                "label": "Pilar 1 Descripción",
+                "name": "lp_pillar1_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Equipo humano capacitado, puntual y con vocación de servicio para que todo salga perfecto."
+            },
+            {
+                "key": "field_lp_pillar2_title",
+                "label": "Pilar 2 Título",
+                "name": "lp_pillar2_title",
+                "type": "text",
+                "default_value": "Sonido Premium"
+            },
+            {
+                "key": "field_lp_pillar2_desc",
+                "label": "Pilar 2 Descripción",
+                "name": "lp_pillar2_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Cero saturación ni acoples. Calibración acústica con procesadores digitales de alta fidelidad."
+            },
+            {
+                "key": "field_lp_pillar3_title",
+                "label": "Pilar 3 Título",
+                "name": "lp_pillar3_title",
+                "type": "text",
+                "default_value": "Iluminación Dinámica"
+            },
+            {
+                "key": "field_lp_pillar3_desc",
+                "label": "Pilar 3 Descripción",
+                "name": "lp_pillar3_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Efectos visuales coreografiados por operadores de consolas DMX profesionales."
+            },
+            {
+                "key": "field_lp_pillar4_title",
+                "label": "Pilar 4 Título",
+                "name": "lp_pillar4_title",
+                "type": "text",
+                "default_value": "Mobiliario Elegante"
+            },
+            {
+                "key": "field_lp_pillar4_desc",
+                "label": "Pilar 4 Descripción",
+                "name": "lp_pillar4_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Diseño estético y confortable que armoniza perfectamente con la temática de tu festejo."
+            },
+            {
+                "key": "tab_h_testimonials",
+                "label": "7. Testimonios",
+                "type": "tab"
+            },
+            {
+                "key": "field_lp_testi_badge",
+                "label": "Badge Sección Testimonios",
+                "name": "lp_testi_badge",
+                "type": "text",
+                "default_value": "Opiniones de Clientes"
+            },
+            {
+                "key": "field_lp_testi_title",
+                "label": "Título Sección Testimonios",
+                "name": "lp_testi_title",
+                "type": "text",
+                "default_value": "Lo que dicen nuestros clientes"
+            },
+            {
+                "key": "field_lp_testi_desc",
+                "label": "Descripción Sección Testimonios",
+                "name": "lp_testi_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "La satisfacción de cada anfitrión es nuestro mayor testimonio de compromiso y éxito."
+            },
+            {
                 "key": "field_lp_testi1_name",
-                "label": "Testimonio 1 - Nombre",
+                "label": "Testimonio 1 Cliente",
                 "name": "lp_testi1_name",
                 "type": "text",
                 "default_value": "Laura Torres"
             },
             {
                 "key": "field_lp_testi1_city",
-                "label": "Testimonio 1 - Ciudad",
+                "label": "Testimonio 1 Evento/Ciudad",
                 "name": "lp_testi1_city",
                 "type": "text",
-                "default_value": "Bogotá"
+                "default_value": "Bogotá • Celebración 15 Años"
             },
             {
                 "key": "field_lp_testi1_text",
-                "label": "Testimonio 1 - Comentario",
+                "label": "Testimonio 1 Comentario",
                 "name": "lp_testi1_text",
                 "type": "textarea",
                 "rows": 3,
-                "default_value": "Contratamos a LatinPartyEventos para la celebración de los 15 años de mi hija y fue una experiencia inolvidable. Desde la decoración hasta la música, todo estuvo perfectamente coordinado. La atención fue muy profesional y nuestros invitados quedaron encantados."
+                "default_value": "Contratamos a LatinPartyEventos para la celebración de los 15 años de mi hija y fue una experiencia inolvidable. Desde la decoración hasta la música, todo estuvo perfectamente coordinado. La atención fue muy profesional y nuestros invitados quedaron encantados. ¡Gracias por hacer de ese día algo tan especial!"
             },
             {
                 "key": "field_lp_testi2_name",
-                "label": "Testimonio 2 - Nombre",
+                "label": "Testimonio 2 Cliente",
                 "name": "lp_testi2_name",
                 "type": "text",
                 "default_value": "Carolina Ramírez"
             },
             {
                 "key": "field_lp_testi2_city",
-                "label": "Testimonio 2 - Ciudad",
+                "label": "Testimonio 2 Evento/Ciudad",
                 "name": "lp_testi2_city",
                 "type": "text",
-                "default_value": "Ibagué"
+                "default_value": "Ibagué • Evento Corporativo"
             },
             {
                 "key": "field_lp_testi2_text",
-                "label": "Testimonio 2 - Comentario",
+                "label": "Testimonio 2 Comentario",
                 "name": "lp_testi2_text",
                 "type": "textarea",
                 "rows": 3,
-                "default_value": "Confiamos en LatinPartyEventos para la fiesta de fin de año de la empresa y superaron todas nuestras expectativas. La organización, la ambientación y la energía que lograron fue espectacular."
+                "default_value": "Confiamos en LatinPartyEventos para la fiesta de fin de año de la empresa y superaron todas nuestras expectativas. La organización, la ambientación y la energía que lograron fue espectacular. Sin duda volveremos a trabajar con ellos para futuros eventos."
+            },
+            {
+                "key": "field_lp_testi3_name",
+                "label": "Testimonio 3 Cliente",
+                "name": "lp_testi3_name",
+                "type": "text",
+                "default_value": "Julián & Andrea"
+            },
+            {
+                "key": "field_lp_testi3_city",
+                "label": "Testimonio 3 Evento/Ciudad",
+                "name": "lp_testi3_city",
+                "type": "text",
+                "default_value": "Bogotá • Boda Campestre"
+            },
+            {
+                "key": "field_lp_testi3_text",
+                "label": "Testimonio 3 Comentario",
+                "name": "lp_testi3_text",
+                "type": "textarea",
+                "rows": 3,
+                "default_value": "El montaje de sonido para nuestra boda y la pista de luces LED superaron completamente lo que soñamos. Todos los invitados no pararon de bailar toda la noche. ¡Recomendadísimos al 100%!"
+            },
+            {
+                "key": "tab_h_form",
+                "label": "8. Formulario Rápido Home",
+                "type": "tab"
+            },
+            {
+                "key": "field_lp_home_form_badge",
+                "label": "Badge Formulario",
+                "name": "lp_home_form_badge",
+                "type": "text",
+                "default_value": "Cotización Online"
+            },
+            {
+                "key": "field_lp_home_form_title",
+                "label": "Título Formulario",
+                "name": "lp_home_form_title",
+                "type": "text",
+                "default_value": "Diseñemos juntos tu próximo evento"
+            },
+            {
+                "key": "field_lp_home_form_desc",
+                "label": "Descripción Formulario",
+                "name": "lp_home_form_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Diligencia este formulario y nuestro director técnico te contactará con una propuesta a tu medida en menos de 30 minutos."
+            },
+            {
+                "key": "field_lp_home_form_btn",
+                "label": "Texto Botón de Envío",
+                "name": "lp_home_form_btn",
+                "type": "text",
+                "default_value": "Enviar Solicitud • Recibir Asesoría"
+            },
+            {
+                "key": "tab_h_cta",
+                "label": "9. Llamado a la Acción Final",
+                "type": "tab"
+            },
+            {
+                "key": "field_lp_cta_badge",
+                "label": "Badge CTA Final",
+                "name": "lp_cta_badge",
+                "type": "text",
+                "default_value": "⚡ Asesoría Inmediata"
+            },
+            {
+                "key": "field_lp_cta_title",
+                "label": "Título CTA Final",
+                "name": "lp_cta_title",
+                "type": "text",
+                "default_value": "¿Listo para tu evento perfecto?"
+            },
+            {
+                "key": "field_lp_cta_desc",
+                "label": "Descripción CTA Final",
+                "name": "lp_cta_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Contáctanos hoy y recibe una asesoría personalizada sin costo con nuestros directores de producción."
+            },
+            {
+                "key": "field_lp_cta_btn1_show",
+                "label": "Mostrar Botón 1 (WhatsApp)",
+                "name": "lp_cta_btn1_show",
+                "type": "true_false",
+                "ui": 1,
+                "default_value": 1
+            },
+            {
+                "key": "field_lp_cta_btn1_text",
+                "label": "Botón 1 Texto",
+                "name": "lp_cta_btn1_text",
+                "type": "text",
+                "default_value": "Hablar por WhatsApp"
+            },
+            {
+                "key": "field_lp_cta_btn1_url",
+                "label": "Botón 1 Enlace (vacío para WhatsApp directo)",
+                "name": "lp_cta_btn1_url",
+                "type": "text",
+                "default_value": ""
+            },
+            {
+                "key": "field_lp_cta_btn2_show",
+                "label": "Mostrar Botón 2 (Cotización)",
+                "name": "lp_cta_btn2_show",
+                "type": "true_false",
+                "ui": 1,
+                "default_value": 1
+            },
+            {
+                "key": "field_lp_cta_btn2_text",
+                "label": "Botón 2 Texto",
+                "name": "lp_cta_btn2_text",
+                "type": "text",
+                "default_value": "Solicitar Cotización"
+            },
+            {
+                "key": "field_lp_cta_btn2_url",
+                "label": "Botón 2 Enlace (vacío para Contacto)",
+                "name": "lp_cta_btn2_url",
+                "type": "text",
+                "default_value": ""
             }
         ],
         "location": [
@@ -333,15 +1133,36 @@
                     "operator": "==",
                     "value": "front-page.php"
                 }
+            ],
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "latin-party-inicio"
+                }
             ]
         ],
-        "menu_order": 1,
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
         "active": true
     },
     {
         "key": "group_lp_servicios_page",
-        "title": "Personalización - Página de Servicios",
+        "title": "Página de Servicios - Latin Party Eventos",
         "fields": [
+            {
+                "key": "tab_s_hero",
+                "label": "Cabecera (Hero)",
+                "type": "tab"
+            },
+            {
+                "key": "field_lp_serv_page_badge",
+                "label": "Badge Cabecera",
+                "name": "lp_serv_page_badge",
+                "type": "text",
+                "default_value": "Nuestras Soluciones"
+            },
             {
                 "key": "field_lp_serv_page_title",
                 "label": "Título de la Página",
@@ -356,6 +1177,327 @@
                 "type": "textarea",
                 "rows": 3,
                 "default_value": "En Latin Party Eventos ofrecemos soluciones completas para cada tipo de celebración. Desde el sonido profesional, la iluminación y la ambientación, hasta la producción integral de conciertos, bodas y eventos corporativos."
+            },
+            {
+                "key": "tab_s_audio",
+                "label": "1. Audio Profesional",
+                "type": "tab"
+            },
+            {
+                "key": "field_lp_serv_audio_badge",
+                "label": "Audio - Badge",
+                "name": "lp_serv_audio_badge",
+                "type": "text",
+                "default_value": "Potencia Acústica"
+            },
+            {
+                "key": "field_lp_serv_audio_title",
+                "label": "Audio - Título",
+                "name": "lp_serv_audio_title",
+                "type": "text",
+                "default_value": "Soluciones de Audio Profesional"
+            },
+            {
+                "key": "field_lp_serv_audio_desc",
+                "label": "Audio - Descripción",
+                "name": "lp_serv_audio_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Configuraciones acústicas de vanguardia calibradas digitalmente para garantizar máxima inteligibilidad de la voz y calidez sonora en cada rincón del recinto."
+            },
+            {
+                "key": "field_lp_serv_a1_badge",
+                "label": "Audio Card 1 - Badge",
+                "name": "lp_serv_a1_badge",
+                "type": "text",
+                "default_value": "Hasta 100 Personas"
+            },
+            {
+                "key": "field_lp_serv_a1_title",
+                "label": "Audio Card 1 - Título",
+                "name": "lp_serv_a1_title",
+                "type": "text",
+                "default_value": "Sonido Convencional"
+            },
+            {
+                "key": "field_lp_serv_a1_desc",
+                "label": "Audio Card 1 - Descripción",
+                "name": "lp_serv_a1_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Ideal para eventos íntimos, matrimonios civiles, 15 años y salones medianos. Altavoces de alta fidelidad, micrófonos inalámbricos UHF y consolas limpias."
+            },
+            {
+                "key": "field_lp_serv_a2_badge",
+                "label": "Audio Card 2 - Badge",
+                "name": "lp_serv_a2_badge",
+                "type": "text",
+                "default_value": "Gran Formato"
+            },
+            {
+                "key": "field_lp_serv_a2_title",
+                "label": "Audio Card 2 - Título",
+                "name": "lp_serv_a2_title",
+                "type": "text",
+                "default_value": "Sonido Line Array"
+            },
+            {
+                "key": "field_lp_serv_a2_desc",
+                "label": "Audio Card 2 - Descripción",
+                "name": "lp_serv_a2_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Para conciertos, festivales, asambleas y recintos masivos. Distribución de presión sonora uniforme en grandes distancias sin pérdida de agudos ni saturación de graves."
+            },
+            {
+                "key": "field_lp_serv_a3_badge",
+                "label": "Audio Card 3 - Badge",
+                "name": "lp_serv_a3_badge",
+                "type": "text",
+                "default_value": "Espectáculos Vivos"
+            },
+            {
+                "key": "field_lp_serv_a3_title",
+                "label": "Audio Card 3 - Título",
+                "name": "lp_serv_a3_title",
+                "type": "text",
+                "default_value": "Sonido Tipo Concierto"
+            },
+            {
+                "key": "field_lp_serv_a3_desc",
+                "label": "Audio Card 3 - Descripción",
+                "name": "lp_serv_a3_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Configuración completa para orquestas y bandas en vivo: microfonía instrumental Shure/Sennheiser, monitores de piso, consolas digitales multicanal y técnicos en vivo."
+            },
+            {
+                "key": "tab_s_lights",
+                "label": "2. Iluminación DMX",
+                "type": "tab"
+            },
+            {
+                "key": "field_lp_serv_lights_badge",
+                "label": "Iluminación - Badge",
+                "name": "lp_serv_lights_badge",
+                "type": "text",
+                "default_value": "Shows Visuales"
+            },
+            {
+                "key": "field_lp_serv_lights_title",
+                "label": "Iluminación - Título",
+                "name": "lp_serv_lights_title",
+                "type": "text",
+                "default_value": "Iluminación Creativa & Control DMX"
+            },
+            {
+                "key": "field_lp_serv_lights_desc",
+                "label": "Iluminación - Descripción",
+                "name": "lp_serv_lights_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Crea atmósferas envolventes y sincronizadas que realzan momentos clave como el vals, el brindis o la apertura del baile."
+            },
+            {
+                "key": "field_lp_serv_l1_badge",
+                "label": "Iluminación Card 1 - Badge",
+                "name": "lp_serv_l1_badge",
+                "type": "text",
+                "default_value": "Dinámicas 360°"
+            },
+            {
+                "key": "field_lp_serv_l1_title",
+                "label": "Iluminación Card 1 - Título",
+                "name": "lp_serv_l1_title",
+                "type": "text",
+                "default_value": "Cabezas Móviles Beam & Spot"
+            },
+            {
+                "key": "field_lp_serv_l1_desc",
+                "label": "Iluminación Card 1 - Descripción",
+                "name": "lp_serv_l1_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Efectos de prisma, gobos personalizados con el logo de tu empresa o las iniciales de los novios, y haces de luz potentes que llenan todo el salón."
+            },
+            {
+                "key": "field_lp_serv_l2_badge",
+                "label": "Iluminación Card 2 - Badge",
+                "name": "lp_serv_l2_badge",
+                "type": "text",
+                "default_value": "Software Computarizado"
+            },
+            {
+                "key": "field_lp_serv_l2_title",
+                "label": "Iluminación Card 2 - Título",
+                "name": "lp_serv_l2_title",
+                "type": "text",
+                "default_value": "Control DMX en Tiempo Real"
+            },
+            {
+                "key": "field_lp_serv_l2_desc",
+                "label": "Iluminación Card 2 - Descripción",
+                "name": "lp_serv_l2_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Programación milimétrica por escenas. Cambios de color acordes a la temática de la decoración y sincronía total con la música."
+            },
+            {
+                "key": "field_lp_serv_l3_badge",
+                "label": "Iluminación Card 3 - Badge",
+                "name": "lp_serv_l3_badge",
+                "type": "text",
+                "default_value": "Ambientación Perimetral"
+            },
+            {
+                "key": "field_lp_serv_l3_title",
+                "label": "Iluminación Card 3 - Título",
+                "name": "lp_serv_l3_title",
+                "type": "text",
+                "default_value": "Par LED, Neón & City Color"
+            },
+            {
+                "key": "field_lp_serv_l3_desc",
+                "label": "Iluminación Card 3 - Descripción",
+                "name": "lp_serv_l3_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Baño de luz a paredes, columnas y jardines para transformar salones comunes en espacios de alta sofisticación y glamour."
+            },
+            {
+                "key": "tab_s_struct",
+                "label": "3. Pistas LED & Tarimas",
+                "type": "tab"
+            },
+            {
+                "key": "field_lp_serv_led_badge",
+                "label": "Pistas - Badge",
+                "name": "lp_serv_led_badge",
+                "type": "text",
+                "default_value": "Estructuras & Baile"
+            },
+            {
+                "key": "field_lp_serv_led_title",
+                "label": "Pistas - Título",
+                "name": "lp_serv_led_title",
+                "type": "text",
+                "default_value": "Pistas de Baile LED, Tarimas y Carpas"
+            },
+            {
+                "key": "field_lp_serv_led_desc",
+                "label": "Pistas - Descripción",
+                "name": "lp_serv_led_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Infraestructura sólida con certificación técnica para eventos al aire libre o en salones cerrados."
+            },
+            {
+                "key": "field_lp_serv_e1_badge",
+                "label": "Pistas Card 1 - Badge",
+                "name": "lp_serv_e1_badge",
+                "type": "text",
+                "default_value": "Efecto WOW"
+            },
+            {
+                "key": "field_lp_serv_e1_title",
+                "label": "Pistas Card 1 - Título",
+                "name": "lp_serv_e1_title",
+                "type": "text",
+                "default_value": "Pistas de Baile LED"
+            },
+            {
+                "key": "field_lp_serv_e1_desc",
+                "label": "Pistas Card 1 - Descripción",
+                "name": "lp_serv_e1_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Paneles modulares de alta resistencia con cristal templado. Gráficos de túnel infinito, estrellas, corazones, nombres y ecualizadores visuales."
+            },
+            {
+                "key": "field_lp_serv_e2_badge",
+                "label": "Pistas Card 2 - Badge",
+                "name": "lp_serv_e2_badge",
+                "type": "text",
+                "default_value": "Modularidad Segura"
+            },
+            {
+                "key": "field_lp_serv_e2_title",
+                "label": "Pistas Card 2 - Título",
+                "name": "lp_serv_e2_title",
+                "type": "text",
+                "default_value": "Tarimas y Pasarelas"
+            },
+            {
+                "key": "field_lp_serv_e2_desc",
+                "label": "Pistas Card 2 - Descripción",
+                "name": "lp_serv_e2_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Módulos regulables en altura con faldones perimetrales, escaleras de acceso antideslizantes, barandas y atriles para conferencias o desfiles."
+            },
+            {
+                "key": "field_lp_serv_e3_badge",
+                "label": "Pistas Card 3 - Badge",
+                "name": "lp_serv_e3_badge",
+                "type": "text",
+                "default_value": "Protección Total"
+            },
+            {
+                "key": "field_lp_serv_e3_title",
+                "label": "Pistas Card 3 - Título",
+                "name": "lp_serv_e3_title",
+                "type": "text",
+                "default_value": "Carpas Estructurales"
+            },
+            {
+                "key": "field_lp_serv_e3_desc",
+                "label": "Pistas Card 3 - Descripción",
+                "name": "lp_serv_e3_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Carpas tipo hangar de 6x12m y mayores dimensiones, impermeables, con laterales transparentes tipo cristal y plafones decorativos en telas."
+            },
+            {
+                "key": "tab_s_banner",
+                "label": "4. Banner Asesoría",
+                "type": "tab"
+            },
+            {
+                "key": "field_lp_serv_cta_title",
+                "label": "Banner Asesoría - Título",
+                "name": "lp_serv_cta_title",
+                "type": "text",
+                "default_value": "¿Necesitas un paquete personalizado?"
+            },
+            {
+                "key": "field_lp_serv_cta_desc",
+                "label": "Banner Asesoría - Descripción",
+                "name": "lp_serv_cta_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Armamos la combinación perfecta de sonido, luces, pista LED y carpas según tu presupuesto y cantidad de invitados."
+            },
+            {
+                "key": "field_lp_serv_cta_btn_show",
+                "label": "Mostrar Botón Asesoría",
+                "name": "lp_serv_cta_btn_show",
+                "type": "true_false",
+                "ui": 1,
+                "default_value": 1
+            },
+            {
+                "key": "field_lp_serv_cta_btn",
+                "label": "Banner Asesoría - Texto del Botón",
+                "name": "lp_serv_cta_btn",
+                "type": "text",
+                "default_value": "Hablar con un Asesor"
+            },
+            {
+                "key": "field_lp_serv_cta_url",
+                "label": "Banner Asesoría - Enlace del Botón (vacío para WhatsApp)",
+                "name": "lp_serv_cta_url",
+                "type": "text",
+                "default_value": ""
             }
         ],
         "location": [
@@ -365,44 +1507,235 @@
                     "operator": "==",
                     "value": "page-servicios.php"
                 }
+            ],
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "latin-party-servicios"
+                }
             ]
         ],
-        "menu_order": 2,
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
         "active": true
     },
     {
         "key": "group_lp_nosotros_page",
-        "title": "Personalización - Página Nosotros",
+        "title": "Página Nosotros - Latin Party Eventos",
         "fields": [
             {
+                "key": "tab_n_hero",
+                "label": "Cabecera (Hero)",
+                "type": "tab"
+            },
+            {
+                "key": "field_lp_nosotros_badge",
+                "label": "Badge Cabecera",
+                "name": "lp_nosotros_badge",
+                "type": "text",
+                "default_value": "Nuestra Historia • Valores"
+            },
+            {
+                "key": "field_lp_nosotros_hero_title",
+                "label": "Título Principal",
+                "name": "lp_nosotros_hero_title",
+                "type": "text",
+                "default_value": "Tu Celebración, Nuestro Legado"
+            },
+            {
+                "key": "field_lp_nosotros_hero_desc",
+                "label": "Descripción Principal",
+                "name": "lp_nosotros_hero_desc",
+                "type": "textarea",
+                "rows": 3,
+                "default_value": "En Latin Party Eventos nos especializamos en diseñar experiencias memorables que combinan tecnología, pasión, profesionalismo y excelencia en cada detalle."
+            },
+            {
+                "key": "tab_n_mv",
+                "label": "Misión & Visión",
+                "type": "tab"
+            },
+            {
+                "key": "field_lp_mision_badge",
+                "label": "Misión - Badge",
+                "name": "lp_mision_badge",
+                "type": "text",
+                "default_value": "Propósito Fundamental"
+            },
+            {
                 "key": "field_lp_mision_title",
-                "label": "Título de Misión",
+                "label": "Misión - Título",
                 "name": "lp_mision_title",
                 "type": "text",
                 "default_value": "Nuestra Misión"
             },
             {
                 "key": "field_lp_mision_text",
-                "label": "Texto de Misión",
+                "label": "Misión - Texto",
                 "name": "lp_mision_text",
                 "type": "textarea",
                 "rows": 4,
-                "default_value": "Ofrecer alternativas efectivas, eficaces y eficientes, en la creación, diseño, organización y ejecución de eventos sociales y empresariales. Crear un ambiente óptimo con calidad, seriedad y cumplimiento, garantizando una ocasión inolvidable."
+                "default_value": "Ofrecer alternativas efectivas, eficaces y eficientes en la creación, diseño, organización y ejecución de eventos sociales y empresariales. Crear un ambiente óptimo con calidad, seriedad y cumplimiento, garantizando una ocasión inolvidable."
+            },
+            {
+                "key": "field_lp_vision_badge",
+                "label": "Visión - Badge",
+                "name": "lp_vision_badge",
+                "type": "text",
+                "default_value": "Hacia el Futuro"
             },
             {
                 "key": "field_lp_vision_title",
-                "label": "Título de Visión",
+                "label": "Visión - Título",
                 "name": "lp_vision_title",
                 "type": "text",
                 "default_value": "Nuestra Visión"
             },
             {
                 "key": "field_lp_vision_text",
-                "label": "Texto de Visión",
+                "label": "Visión - Texto",
                 "name": "lp_vision_text",
                 "type": "textarea",
                 "rows": 4,
                 "default_value": "Queremos que LATIN PARTY EVENTOS sea una empresa líder en organización y producción de eventos sociales y corporativos, con presencia y reconocimiento a nivel nacional, basada en el profesionalismo y la calidad humana de nuestro personal."
+            },
+            {
+                "key": "tab_n_val",
+                "label": "Valores Corporativos",
+                "type": "tab"
+            },
+            {
+                "key": "field_lp_val_sec_badge",
+                "label": "Valores - Badge Sección",
+                "name": "lp_val_sec_badge",
+                "type": "text",
+                "default_value": "Principios de Trabajo"
+            },
+            {
+                "key": "field_lp_val_sec_title",
+                "label": "Valores - Título Sección",
+                "name": "lp_val_sec_title",
+                "type": "text",
+                "default_value": "Nuestros Valores"
+            },
+            {
+                "key": "field_lp_val_sec_desc",
+                "label": "Valores - Descripción Sección",
+                "name": "lp_val_sec_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "En cada proyecto ponemos en práctica principios que garantizan experiencias únicas y exitosas."
+            },
+            {
+                "key": "field_lp_val1_title",
+                "label": "Valor 1 - Título",
+                "name": "lp_val1_title",
+                "type": "text",
+                "default_value": "Profesionalismo"
+            },
+            {
+                "key": "field_lp_val1_desc",
+                "label": "Valor 1 - Descripción",
+                "name": "lp_val1_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Un equipo técnico y logístico altamente capacitado en cada área del evento: ingenieros de sonido, operadores de luces y directores de protocolo."
+            },
+            {
+                "key": "field_lp_val2_title",
+                "label": "Valor 2 - Título",
+                "name": "lp_val2_title",
+                "type": "text",
+                "default_value": "Ahorro de Tiempo y Recursos"
+            },
+            {
+                "key": "field_lp_val2_desc",
+                "label": "Valor 2 - Descripción",
+                "name": "lp_val2_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Nos encargamos de todo el proceso técnico y de coordinación, permitiéndote disfrutar de tu día especial sin el estrés de la logística."
+            },
+            {
+                "key": "field_lp_val3_title",
+                "label": "Valor 3 - Título",
+                "name": "lp_val3_title",
+                "type": "text",
+                "default_value": "Mayor Visibilidad de Marca"
+            },
+            {
+                "key": "field_lp_val3_desc",
+                "label": "Valor 3 - Descripción",
+                "name": "lp_val3_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Para eventos empresariales, potenciamos el posicionamiento de tu marca con puestas en escena de alto impacto que cautivan a los asistentes."
+            },
+            {
+                "key": "field_lp_val4_title",
+                "label": "Valor 4 - Título",
+                "name": "lp_val4_title",
+                "type": "text",
+                "default_value": "Cumplimiento & Calidad"
+            },
+            {
+                "key": "field_lp_val4_desc",
+                "label": "Valor 4 - Descripción",
+                "name": "lp_val4_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Puntualidad rigurosa en el montaje y pruebas de sonido anticipadas. Garantizamos cero improvisaciones en tu evento."
+            },
+            {
+                "key": "tab_n_banner",
+                "label": "Banner de Crecimiento",
+                "type": "tab"
+            },
+            {
+                "key": "field_lp_nos_cta_badge",
+                "label": "Banner - Badge",
+                "name": "lp_nos_cta_badge",
+                "type": "text",
+                "default_value": "Relaciones Duraderas"
+            },
+            {
+                "key": "field_lp_nos_cta_title",
+                "label": "Banner - Título",
+                "name": "lp_nos_cta_title",
+                "type": "text",
+                "default_value": "¿Listo para crecer con nosotros?"
+            },
+            {
+                "key": "field_lp_nos_cta_desc",
+                "label": "Banner - Descripción",
+                "name": "lp_nos_cta_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Nuestra misión y visión están enfocadas en ayudarte a alcanzar tus metas, construyendo momentos memorables que trascienden en el tiempo."
+            },
+            {
+                "key": "field_lp_nos_cta_btn_show",
+                "label": "Mostrar Botón",
+                "name": "lp_nos_cta_btn_show",
+                "type": "true_false",
+                "ui": 1,
+                "default_value": 1
+            },
+            {
+                "key": "field_lp_nos_cta_btn",
+                "label": "Banner - Texto del Botón",
+                "name": "lp_nos_cta_btn",
+                "type": "text",
+                "default_value": "Quiero una Estrategia a Medida"
+            },
+            {
+                "key": "field_lp_nos_cta_url",
+                "label": "Banner - Enlace del Botón (vacío para WhatsApp)",
+                "name": "lp_nos_cta_url",
+                "type": "text",
+                "default_value": ""
             }
         ],
         "location": [
@@ -412,29 +1745,206 @@
                     "operator": "==",
                     "value": "page-nosotros.php"
                 }
+            ],
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "latin-party-nosotros"
+                }
             ]
         ],
-        "menu_order": 3,
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
         "active": true
     },
     {
         "key": "group_lp_contacto_page",
-        "title": "Personalización - Página de Contacto",
+        "title": "Página Contacto - Latin Party Eventos",
         "fields": [
             {
+                "key": "tab_c_hero",
+                "label": "Cabecera (Hero)",
+                "type": "tab"
+            },
+            {
+                "key": "field_lp_contact_hero_badge",
+                "label": "Badge Cabecera",
+                "name": "lp_contact_hero_badge",
+                "type": "text",
+                "default_value": "Atención Inmediata"
+            },
+            {
                 "key": "field_lp_contact_hero_title",
-                "label": "Título Cabecera de Contacto",
+                "label": "Título Principal",
                 "name": "lp_contact_hero_title",
                 "type": "text",
                 "default_value": "Tu Celebración, Nuestro Legado"
             },
             {
                 "key": "field_lp_contact_hero_desc",
-                "label": "Descripción Cabecera de Contacto",
+                "label": "Descripción Principal",
                 "name": "lp_contact_hero_desc",
                 "type": "textarea",
                 "rows": 3,
                 "default_value": "¿Planeando un evento inolvidable? Nuestro equipo está listo para asesorarte y crear la mejor experiencia para ti y tus invitados. Déjanos tus datos y recibe una cotización gratuita en minutos."
+            },
+            {
+                "key": "tab_c_cards",
+                "label": "Tarjetas de Contacto",
+                "type": "tab"
+            },
+            {
+                "key": "field_lp_c_phone_title",
+                "label": "Tarjeta 1 - Título",
+                "name": "lp_c_phone_title",
+                "type": "text",
+                "default_value": "Línea Telefónica"
+            },
+            {
+                "key": "field_lp_c_phone_sub",
+                "label": "Tarjeta 1 - Subtítulo",
+                "name": "lp_c_phone_sub",
+                "type": "text",
+                "default_value": "Atención de lunes a sábado"
+            },
+            {
+                "key": "field_lp_c_phone_val",
+                "label": "Tarjeta 1 - Número",
+                "name": "lp_c_phone_val",
+                "type": "text",
+                "default_value": "+57 311 8487785"
+            },
+            {
+                "key": "field_lp_c_wa_title",
+                "label": "Tarjeta 2 - Título",
+                "name": "lp_c_wa_title",
+                "type": "text",
+                "default_value": "WhatsApp Oficial"
+            },
+            {
+                "key": "field_lp_c_wa_sub",
+                "label": "Tarjeta 2 - Subtítulo",
+                "name": "lp_c_wa_sub",
+                "type": "text",
+                "default_value": "Respuesta rápida"
+            },
+            {
+                "key": "field_lp_c_wa_btn",
+                "label": "Tarjeta 2 - Botón Texto",
+                "name": "lp_c_wa_btn",
+                "type": "text",
+                "default_value": "Chatear Ahora"
+            },
+            {
+                "key": "field_lp_c_wa_url",
+                "label": "Tarjeta 2 - Botón Enlace",
+                "name": "lp_c_wa_url",
+                "type": "text",
+                "default_value": ""
+            },
+            {
+                "key": "field_lp_c_mail_title",
+                "label": "Tarjeta 3 - Título",
+                "name": "lp_c_mail_title",
+                "type": "text",
+                "default_value": "Correo de Contacto"
+            },
+            {
+                "key": "field_lp_c_mail_sub",
+                "label": "Tarjeta 3 - Subtítulo",
+                "name": "lp_c_mail_sub",
+                "type": "text",
+                "default_value": "Propuestas y cotizaciones"
+            },
+            {
+                "key": "field_lp_c_mail_val",
+                "label": "Tarjeta 3 - Email",
+                "name": "lp_c_mail_val",
+                "type": "text",
+                "default_value": "contacto@latinpartyeventos.com"
+            },
+            {
+                "key": "field_lp_c_loc_title",
+                "label": "Tarjeta 4 - Título",
+                "name": "lp_c_loc_title",
+                "type": "text",
+                "default_value": "Sede & Cobertura"
+            },
+            {
+                "key": "field_lp_c_loc_sub",
+                "label": "Tarjeta 4 - Subtítulo",
+                "name": "lp_c_loc_sub",
+                "type": "text",
+                "default_value": "Bogotá, Colombia"
+            },
+            {
+                "key": "field_lp_c_loc_badge",
+                "label": "Tarjeta 4 - Cobertura Texto",
+                "name": "lp_c_loc_badge",
+                "type": "text",
+                "default_value": "Servicio a Nivel Nacional"
+            },
+            {
+                "key": "tab_c_form",
+                "label": "Formulario de Cotización",
+                "type": "tab"
+            },
+            {
+                "key": "field_lp_contact_form_badge",
+                "label": "Badge Formulario",
+                "name": "lp_contact_form_badge",
+                "type": "text",
+                "default_value": "Cotización Gratuita"
+            },
+            {
+                "key": "field_lp_contact_form_title",
+                "label": "Título del Formulario",
+                "name": "lp_contact_form_title",
+                "type": "text",
+                "default_value": "Diseñemos juntos tu evento"
+            },
+            {
+                "key": "field_lp_contact_form_desc",
+                "label": "Descripción del Formulario",
+                "name": "lp_contact_form_desc",
+                "type": "textarea",
+                "rows": 2,
+                "default_value": "Completa el formulario y nos pondremos en contacto contigo de forma inmediata."
+            },
+            {
+                "key": "field_lp_contact_btn_text",
+                "label": "Texto Botón Enviar",
+                "name": "lp_contact_btn_text",
+                "type": "text",
+                "default_value": "Enviar Cotización Ahora"
+            },
+            {
+                "key": "tab_c_social",
+                "label": "Redes Sociales",
+                "type": "tab"
+            },
+            {
+                "key": "field_lp_contact_social_text",
+                "label": "Texto Superior Redes",
+                "name": "lp_contact_social_text",
+                "type": "text",
+                "default_value": "Síguenos en redes como @Latinpartyeventos"
+            },
+            {
+                "key": "field_lp_contact_fb_url",
+                "label": "Enlace Facebook",
+                "name": "lp_contact_fb_url",
+                "type": "text",
+                "default_value": ""
+            },
+            {
+                "key": "field_lp_contact_ig_url",
+                "label": "Enlace Instagram",
+                "name": "lp_contact_ig_url",
+                "type": "text",
+                "default_value": ""
             }
         ],
         "location": [
@@ -444,9 +1954,18 @@
                     "operator": "==",
                     "value": "page-contacto.php"
                 }
+            ],
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "latin-party-contacto"
+                }
             ]
         ],
-        "menu_order": 4,
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
         "active": true
     }
 ]

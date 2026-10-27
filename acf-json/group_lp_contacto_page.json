@@ -1,21 +1,189 @@
 {
     "key": "group_lp_contacto_page",
-    "title": "Personalización - Página de Contacto",
+    "title": "Página Contacto - Latin Party Eventos",
     "fields": [
         {
+            "key": "tab_c_hero",
+            "label": "Cabecera (Hero)",
+            "type": "tab"
+        },
+        {
+            "key": "field_lp_contact_hero_badge",
+            "label": "Badge Cabecera",
+            "name": "lp_contact_hero_badge",
+            "type": "text",
+            "default_value": "Atención Inmediata"
+        },
+        {
             "key": "field_lp_contact_hero_title",
-            "label": "Título Cabecera de Contacto",
+            "label": "Título Principal",
             "name": "lp_contact_hero_title",
             "type": "text",
             "default_value": "Tu Celebración, Nuestro Legado"
         },
         {
             "key": "field_lp_contact_hero_desc",
-            "label": "Descripción Cabecera de Contacto",
+            "label": "Descripción Principal",
             "name": "lp_contact_hero_desc",
             "type": "textarea",
             "rows": 3,
             "default_value": "¿Planeando un evento inolvidable? Nuestro equipo está listo para asesorarte y crear la mejor experiencia para ti y tus invitados. Déjanos tus datos y recibe una cotización gratuita en minutos."
+        },
+        {
+            "key": "tab_c_cards",
+            "label": "Tarjetas de Contacto",
+            "type": "tab"
+        },
+        {
+            "key": "field_lp_c_phone_title",
+            "label": "Tarjeta 1 - Título",
+            "name": "lp_c_phone_title",
+            "type": "text",
+            "default_value": "Línea Telefónica"
+        },
+        {
+            "key": "field_lp_c_phone_sub",
+            "label": "Tarjeta 1 - Subtítulo",
+            "name": "lp_c_phone_sub",
+            "type": "text",
+            "default_value": "Atención de lunes a sábado"
+        },
+        {
+            "key": "field_lp_c_phone_val",
+            "label": "Tarjeta 1 - Número",
+            "name": "lp_c_phone_val",
+            "type": "text",
+            "default_value": "+57 311 8487785"
+        },
+        {
+            "key": "field_lp_c_wa_title",
+            "label": "Tarjeta 2 - Título",
+            "name": "lp_c_wa_title",
+            "type": "text",
+            "default_value": "WhatsApp Oficial"
+        },
+        {
+            "key": "field_lp_c_wa_sub",
+            "label": "Tarjeta 2 - Subtítulo",
+            "name": "lp_c_wa_sub",
+            "type": "text",
+            "default_value": "Respuesta rápida"
+        },
+        {
+            "key": "field_lp_c_wa_btn",
+            "label": "Tarjeta 2 - Botón Texto",
+            "name": "lp_c_wa_btn",
+            "type": "text",
+            "default_value": "Chatear Ahora"
+        },
+        {
+            "key": "field_lp_c_wa_url",
+            "label": "Tarjeta 2 - Botón Enlace",
+            "name": "lp_c_wa_url",
+            "type": "text",
+            "default_value": ""
+        },
+        {
+            "key": "field_lp_c_mail_title",
+            "label": "Tarjeta 3 - Título",
+            "name": "lp_c_mail_title",
+            "type": "text",
+            "default_value": "Correo de Contacto"
+        },
+        {
+            "key": "field_lp_c_mail_sub",
+            "label": "Tarjeta 3 - Subtítulo",
+            "name": "lp_c_mail_sub",
+            "type": "text",
+            "default_value": "Propuestas y cotizaciones"
+        },
+        {
+            "key": "field_lp_c_mail_val",
+            "label": "Tarjeta 3 - Email",
+            "name": "lp_c_mail_val",
+            "type": "text",
+            "default_value": "contacto@latinpartyeventos.com"
+        },
+        {
+            "key": "field_lp_c_loc_title",
+            "label": "Tarjeta 4 - Título",
+            "name": "lp_c_loc_title",
+            "type": "text",
+            "default_value": "Sede & Cobertura"
+        },
+        {
+            "key": "field_lp_c_loc_sub",
+            "label": "Tarjeta 4 - Subtítulo",
+            "name": "lp_c_loc_sub",
+            "type": "text",
+            "default_value": "Bogotá, Colombia"
+        },
+        {
+            "key": "field_lp_c_loc_badge",
+            "label": "Tarjeta 4 - Cobertura Texto",
+            "name": "lp_c_loc_badge",
+            "type": "text",
+            "default_value": "Servicio a Nivel Nacional"
+        },
+        {
+            "key": "tab_c_form",
+            "label": "Formulario de Cotización",
+            "type": "tab"
+        },
+        {
+            "key": "field_lp_contact_form_badge",
+            "label": "Badge Formulario",
+            "name": "lp_contact_form_badge",
+            "type": "text",
+            "default_value": "Cotización Gratuita"
+        },
+        {
+            "key": "field_lp_contact_form_title",
+            "label": "Título del Formulario",
+            "name": "lp_contact_form_title",
+            "type": "text",
+            "default_value": "Diseñemos juntos tu evento"
+        },
+        {
+            "key": "field_lp_contact_form_desc",
+            "label": "Descripción del Formulario",
+            "name": "lp_contact_form_desc",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Completa el formulario y nos pondremos en contacto contigo de forma inmediata."
+        },
+        {
+            "key": "field_lp_contact_btn_text",
+            "label": "Texto Botón Enviar",
+            "name": "lp_contact_btn_text",
+            "type": "text",
+            "default_value": "Enviar Cotización Ahora"
+        },
+        {
+            "key": "tab_c_social",
+            "label": "Redes Sociales",
+            "type": "tab"
+        },
+        {
+            "key": "field_lp_contact_social_text",
+            "label": "Texto Superior Redes",
+            "name": "lp_contact_social_text",
+            "type": "text",
+            "default_value": "Síguenos en redes como @Latinpartyeventos"
+        },
+        {
+            "key": "field_lp_contact_fb_url",
+            "label": "Enlace Facebook",
+            "name": "lp_contact_fb_url",
+            "type": "text",
+            "default_value": ""
+        },
+        {
+            "key": "field_lp_contact_ig_url",
+            "label": "Enlace Instagram",
+            "name": "lp_contact_ig_url",
+            "type": "text",
+            "default_value": ""
         }
     ],
     "location": [
@@ -25,8 +193,17 @@
                 "operator": "==",
                 "value": "page-contacto.php"
             }
+        ],
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "latin-party-contacto"
+            }
         ]
     ],
-    "menu_order": 4,
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
     "active": true
 }

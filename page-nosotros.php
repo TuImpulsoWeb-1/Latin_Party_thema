@@ -54,54 +54,61 @@ $vision_c = lp_get_setting('lp_vision_text', 'Queremos que LATIN PARTY EVENTOS s
 
             <!-- Valores Corporativos -->
             <div class="section-header">
-                <span class="section-badge">Principios de Trabajo</span>
-                <h2 class="section-title">Nuestros <span class="highlight-teal">Valores</span></h2>
-                <p class="section-subtitle">En cada proyecto ponemos en práctica principios que garantizan experiencias únicas y exitosas.</p>
+                <span class="section-badge"><?php echo esc_html(lp_get_setting('lp_val_sec_badge', 'Principios de Trabajo')); ?></span>
+                <h2 class="section-title"><?php echo esc_html(lp_get_setting('lp_val_sec_title', 'Nuestros Valores')); ?></h2>
+                <p class="section-subtitle"><?php echo esc_html(lp_get_setting('lp_val_sec_desc', 'En cada proyecto ponemos en práctica principios que garantizan experiencias únicas y exitosas.')); ?></p>
             </div>
 
             <div class="values-grid">
                 <div class="value-card">
-                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #ffffff;"><i class="fa-solid fa-award" style="color: var(--teal-primary); margin-right: 8px;"></i> Profesionalismo</h3>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #ffffff;"><i class="fa-solid fa-award" style="color: var(--teal-primary); margin-right: 8px;"></i> <?php echo esc_html(lp_get_setting('lp_val1_title', 'Profesionalismo')); ?></h3>
                     <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
-                        Un equipo técnico y logístico altamente capacitado en cada área del evento: ingenieros de sonido, operadores de luces y directores de protocolo.
+                        <?php echo esc_html(lp_get_setting('lp_val1_desc', 'Un equipo técnico y logístico altamente capacitado en cada área del evento: ingenieros de sonido, operadores de luces y directores de protocolo.')); ?>
                     </p>
                 </div>
 
                 <div class="value-card gold-edge">
-                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #ffffff;"><i class="fa-solid fa-clock" style="color: var(--gold-light); margin-right: 8px;"></i> Ahorro de Tiempo y Recursos</h3>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #ffffff;"><i class="fa-solid fa-clock" style="color: var(--gold-light); margin-right: 8px;"></i> <?php echo esc_html(lp_get_setting('lp_val2_title', 'Ahorro de Tiempo y Recursos')); ?></h3>
                     <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
-                        Nos encargamos de todo el proceso técnico y de coordinación, permitiéndote disfrutar de tu día especial sin el estrés de la logística.
+                        <?php echo esc_html(lp_get_setting('lp_val2_desc', 'Nos encargamos de todo el proceso técnico y de coordinación, permitiéndote disfrutar de tu día especial sin el estrés de la logística.')); ?>
                     </p>
                 </div>
 
                 <div class="value-card">
-                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #ffffff;"><i class="fa-solid fa-chart-line" style="color: var(--teal-primary); margin-right: 8px;"></i> Mayor Visibilidad de Marca</h3>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #ffffff;"><i class="fa-solid fa-chart-line" style="color: var(--teal-primary); margin-right: 8px;"></i> <?php echo esc_html(lp_get_setting('lp_val3_title', 'Mayor Visibilidad de Marca')); ?></h3>
                     <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
-                        Para eventos empresariales, potenciamos el posicionamiento de tu marca con puestas en escena de alto impacto que cautivan a los asistentes.
+                        <?php echo esc_html(lp_get_setting('lp_val3_desc', 'Para eventos empresariales, potenciamos el posicionamiento de tu marca con puestas en escena de alto impacto que cautivan a los asistentes.')); ?>
                     </p>
                 </div>
 
                 <div class="value-card gold-edge">
-                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #ffffff;"><i class="fa-solid fa-shield-halved" style="color: var(--gold-light); margin-right: 8px;"></i> Cumplimiento &amp; Calidad</h3>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #ffffff;"><i class="fa-solid fa-shield-halved" style="color: var(--gold-light); margin-right: 8px;"></i> <?php echo esc_html(lp_get_setting('lp_val4_title', 'Cumplimiento & Calidad')); ?></h3>
                     <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
-                        Puntualidad rigurosa en el montaje y pruebas de sonido anticipadas. Garantizamos cero improvisaciones en tu evento.
+                        <?php echo esc_html(lp_get_setting('lp_val4_desc', 'Puntualidad rigurosa en el montaje y pruebas de sonido anticipadas. Garantizamos cero improvisaciones en tu evento.')); ?>
                     </p>
                 </div>
             </div>
 
             <!-- Respaldo / Banner de Crecimiento -->
+            <?php
+            $nos_cta_url      = lp_get_setting('lp_nos_cta_url', '');
+            $nos_cta_btn_show = lp_get_setting('lp_nos_cta_btn_show', true);
+            $nos_cta_link     = !empty($nos_cta_url) ? esc_url($nos_cta_url) : lp_whatsapp_url('¡Hola! Deseo cotizar mi evento con Latin Party Eventos.');
+            ?>
             <div class="banner-advisory" style="margin-top: 60px;">
                 <div class="banner-advisory-inner">
                     <div>
-                        <span class="section-badge gold">Relaciones Duraderas</span>
-                        <h3 style="font-size: 1.8rem; margin-bottom: 10px;">¿Listo para crecer con nosotros?</h3>
-                        <p style="color: var(--text-muted); max-width: 680px;">Nuestra misión y visión están enfocadas en ayudarte a alcanzar tus metas, construyendo momentos memorables que trascienden en el tiempo.</p>
+                        <span class="section-badge gold"><?php echo esc_html(lp_get_setting('lp_nos_cta_badge', 'Relaciones Duraderas')); ?></span>
+                        <h3 style="font-size: clamp(1.4rem, 3.5vw, 1.8rem); margin-bottom: 10px;"><?php echo esc_html(lp_get_setting('lp_nos_cta_title', '¿Listo para crecer con nosotros?')); ?></h3>
+                        <p style="color: var(--text-muted); max-width: 680px;"><?php echo esc_html(lp_get_setting('lp_nos_cta_desc', 'Nuestra misión y visión están enfocadas en ayudarte a alcanzar tus metas, construyendo momentos memorables que trascienden en el tiempo.')); ?></p>
                     </div>
+                    <?php if ($nos_cta_btn_show) : ?>
                     <div>
-                        <a href="<?php echo esc_url(lp_whatsapp_url('¡Hola! Deseo cotizar mi evento con Latin Party Eventos.')); ?>" target="_blank" rel="noopener" class="btn btn-gold">
-                            <i class="fa-brands fa-whatsapp"></i> Quiero una Estrategia a Medida
+                        <a href="<?php echo esc_url($nos_cta_link); ?>" target="_blank" rel="noopener" class="btn btn-gold">
+                            <i class="fa-brands fa-whatsapp"></i> <?php echo esc_html(lp_get_setting('lp_nos_cta_btn', 'Quiero una Estrategia a Medida')); ?>
                         </a>
                     </div>
+                    <?php endif; ?>
                 </div>
             </div>
 

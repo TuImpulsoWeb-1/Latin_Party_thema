@@ -1,36 +1,218 @@
 {
     "key": "group_lp_nosotros_page",
-    "title": "Personalización - Página Nosotros",
+    "title": "Página Nosotros - Latin Party Eventos",
     "fields": [
         {
+            "key": "tab_n_hero",
+            "label": "Cabecera (Hero)",
+            "type": "tab"
+        },
+        {
+            "key": "field_lp_nosotros_badge",
+            "label": "Badge Cabecera",
+            "name": "lp_nosotros_badge",
+            "type": "text",
+            "default_value": "Nuestra Historia • Valores"
+        },
+        {
+            "key": "field_lp_nosotros_hero_title",
+            "label": "Título Principal",
+            "name": "lp_nosotros_hero_title",
+            "type": "text",
+            "default_value": "Tu Celebración, Nuestro Legado"
+        },
+        {
+            "key": "field_lp_nosotros_hero_desc",
+            "label": "Descripción Principal",
+            "name": "lp_nosotros_hero_desc",
+            "type": "textarea",
+            "rows": 3,
+            "default_value": "En Latin Party Eventos nos especializamos en diseñar experiencias memorables que combinan tecnología, pasión, profesionalismo y excelencia en cada detalle."
+        },
+        {
+            "key": "tab_n_mv",
+            "label": "Misión & Visión",
+            "type": "tab"
+        },
+        {
+            "key": "field_lp_mision_badge",
+            "label": "Misión - Badge",
+            "name": "lp_mision_badge",
+            "type": "text",
+            "default_value": "Propósito Fundamental"
+        },
+        {
             "key": "field_lp_mision_title",
-            "label": "Título de Misión",
+            "label": "Misión - Título",
             "name": "lp_mision_title",
             "type": "text",
             "default_value": "Nuestra Misión"
         },
         {
             "key": "field_lp_mision_text",
-            "label": "Texto de Misión",
+            "label": "Misión - Texto",
             "name": "lp_mision_text",
             "type": "textarea",
             "rows": 4,
-            "default_value": "Ofrecer alternativas efectivas, eficaces y eficientes, en la creación, diseño, organización y ejecución de eventos sociales y empresariales. Crear un ambiente óptimo con calidad, seriedad y cumplimiento, garantizando una ocasión inolvidable."
+            "default_value": "Ofrecer alternativas efectivas, eficaces y eficientes en la creación, diseño, organización y ejecución de eventos sociales y empresariales. Crear un ambiente óptimo con calidad, seriedad y cumplimiento, garantizando una ocasión inolvidable."
+        },
+        {
+            "key": "field_lp_vision_badge",
+            "label": "Visión - Badge",
+            "name": "lp_vision_badge",
+            "type": "text",
+            "default_value": "Hacia el Futuro"
         },
         {
             "key": "field_lp_vision_title",
-            "label": "Título de Visión",
+            "label": "Visión - Título",
             "name": "lp_vision_title",
             "type": "text",
             "default_value": "Nuestra Visión"
         },
         {
             "key": "field_lp_vision_text",
-            "label": "Texto de Visión",
+            "label": "Visión - Texto",
             "name": "lp_vision_text",
             "type": "textarea",
             "rows": 4,
             "default_value": "Queremos que LATIN PARTY EVENTOS sea una empresa líder en organización y producción de eventos sociales y corporativos, con presencia y reconocimiento a nivel nacional, basada en el profesionalismo y la calidad humana de nuestro personal."
+        },
+        {
+            "key": "tab_n_val",
+            "label": "Valores Corporativos",
+            "type": "tab"
+        },
+        {
+            "key": "field_lp_val_sec_badge",
+            "label": "Valores - Badge Sección",
+            "name": "lp_val_sec_badge",
+            "type": "text",
+            "default_value": "Principios de Trabajo"
+        },
+        {
+            "key": "field_lp_val_sec_title",
+            "label": "Valores - Título Sección",
+            "name": "lp_val_sec_title",
+            "type": "text",
+            "default_value": "Nuestros Valores"
+        },
+        {
+            "key": "field_lp_val_sec_desc",
+            "label": "Valores - Descripción Sección",
+            "name": "lp_val_sec_desc",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "En cada proyecto ponemos en práctica principios que garantizan experiencias únicas y exitosas."
+        },
+        {
+            "key": "field_lp_val1_title",
+            "label": "Valor 1 - Título",
+            "name": "lp_val1_title",
+            "type": "text",
+            "default_value": "Profesionalismo"
+        },
+        {
+            "key": "field_lp_val1_desc",
+            "label": "Valor 1 - Descripción",
+            "name": "lp_val1_desc",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Un equipo técnico y logístico altamente capacitado en cada área del evento: ingenieros de sonido, operadores de luces y directores de protocolo."
+        },
+        {
+            "key": "field_lp_val2_title",
+            "label": "Valor 2 - Título",
+            "name": "lp_val2_title",
+            "type": "text",
+            "default_value": "Ahorro de Tiempo y Recursos"
+        },
+        {
+            "key": "field_lp_val2_desc",
+            "label": "Valor 2 - Descripción",
+            "name": "lp_val2_desc",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Nos encargamos de todo el proceso técnico y de coordinación, permitiéndote disfrutar de tu día especial sin el estrés de la logística."
+        },
+        {
+            "key": "field_lp_val3_title",
+            "label": "Valor 3 - Título",
+            "name": "lp_val3_title",
+            "type": "text",
+            "default_value": "Mayor Visibilidad de Marca"
+        },
+        {
+            "key": "field_lp_val3_desc",
+            "label": "Valor 3 - Descripción",
+            "name": "lp_val3_desc",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Para eventos empresariales, potenciamos el posicionamiento de tu marca con puestas en escena de alto impacto que cautivan a los asistentes."
+        },
+        {
+            "key": "field_lp_val4_title",
+            "label": "Valor 4 - Título",
+            "name": "lp_val4_title",
+            "type": "text",
+            "default_value": "Cumplimiento & Calidad"
+        },
+        {
+            "key": "field_lp_val4_desc",
+            "label": "Valor 4 - Descripción",
+            "name": "lp_val4_desc",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Puntualidad rigurosa en el montaje y pruebas de sonido anticipadas. Garantizamos cero improvisaciones en tu evento."
+        },
+        {
+            "key": "tab_n_banner",
+            "label": "Banner de Crecimiento",
+            "type": "tab"
+        },
+        {
+            "key": "field_lp_nos_cta_badge",
+            "label": "Banner - Badge",
+            "name": "lp_nos_cta_badge",
+            "type": "text",
+            "default_value": "Relaciones Duraderas"
+        },
+        {
+            "key": "field_lp_nos_cta_title",
+            "label": "Banner - Título",
+            "name": "lp_nos_cta_title",
+            "type": "text",
+            "default_value": "¿Listo para crecer con nosotros?"
+        },
+        {
+            "key": "field_lp_nos_cta_desc",
+            "label": "Banner - Descripción",
+            "name": "lp_nos_cta_desc",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Nuestra misión y visión están enfocadas en ayudarte a alcanzar tus metas, construyendo momentos memorables que trascienden en el tiempo."
+        },
+        {
+            "key": "field_lp_nos_cta_btn_show",
+            "label": "Mostrar Botón",
+            "name": "lp_nos_cta_btn_show",
+            "type": "true_false",
+            "ui": 1,
+            "default_value": 1
+        },
+        {
+            "key": "field_lp_nos_cta_btn",
+            "label": "Banner - Texto del Botón",
+            "name": "lp_nos_cta_btn",
+            "type": "text",
+            "default_value": "Quiero una Estrategia a Medida"
+        },
+        {
+            "key": "field_lp_nos_cta_url",
+            "label": "Banner - Enlace del Botón (vacío para WhatsApp)",
+            "name": "lp_nos_cta_url",
+            "type": "text",
+            "default_value": ""
         }
     ],
     "location": [
@@ -40,8 +222,17 @@
                 "operator": "==",
                 "value": "page-nosotros.php"
             }
+        ],
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "latin-party-nosotros"
+            }
         ]
     ],
-    "menu_order": 3,
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
     "active": true
 }

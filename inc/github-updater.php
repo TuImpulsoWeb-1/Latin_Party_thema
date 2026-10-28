@@ -59,10 +59,6 @@ class Latin_Party_GitHub_Updater {
                     $package_url = $release_info->zipball_url;
                 }
 
-                if (!empty($this->access_token)) {
-                    $package_url = add_query_arg('access_token', $this->access_token, $package_url);
-                }
-
                 $transient->response[$this->slug] = array(
                     'theme'       => $this->slug,
                     'new_version' => $latest_version,
@@ -148,7 +144,10 @@ function latin_party_init_updater() {
         return;
     }
 
-    $repo  = lp_get_setting('lp_github_repo', '');
+    $repo  = lp_get_setting('lp_github_repo', 'TuImpulsoWeb-1/Latin_Party_thema');
+    if (empty($repo)) {
+        $repo = 'TuImpulsoWeb-1/Latin_Party_thema';
+    }
     $token = lp_get_setting('lp_github_token', '');
 
     if (!empty($repo)) {
